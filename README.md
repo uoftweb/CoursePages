@@ -1,5 +1,9 @@
 # Course Pages
 
+## Install Jinja
+
+[Jinja Installation Guide](http://jinja.pocoo.org/docs/dev/intro/#installation)
+
 ## How to get final html
 
 Run `build.py` and the `index.html` file in the same directory will be updated with the content
