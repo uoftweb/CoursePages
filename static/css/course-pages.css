@@ -1,0 +1,239 @@
+/* A `**` is placed before any Base names or modifiers that are not implemented */
+
+
+/*
+ COLORS
+
+ Base:
+   `color name` = Text Colors
+   bg-`color name` = Background Colors
+*/
+/* Text Colors */
+.white { color: #fff; }
+.gray { color: #717C89;  }
+.grey { color: #717C89;  }
+/* Background Colors */
+.bg-blue { background-color: #7BA4D9; }
+
+
+/*
+ TYPOGRAPHY
+*/
+
+/*
+ Font Size
+ Base:
+   f = font-size
+
+ Modifiers:
+     1 = 1st step in size scale
+     2 = 2nd step in size scale
+     3 = 3rd step in size scale
+     4 = 4th step in size scale
+     5 = 5th step in size scale
+ */
+
+/* Since our root font size is 16px, 3rem = 48px */
+.f1 { font-size: 3rem;    }
+.f2 { font-size: 2.5rem;  }
+.f3 { font-size: 2rem;    }
+.f4 { font-size: 1.5rem;  }
+.f5 { font-size: 1.25rem; }
+
+/*
+ Font Weights
+ Base:
+   fw = font-weight
+
+ Modifiers
+   -n = normal
+   -m = medium
+   -b = bold
+*/
+.fw-n { font-weight: 400 }
+.fw-m { font-weight: 500 }
+.fw-b { font-weight: 700 }
+
+/*
+ Text Alignements
+
+ Base:
+   ta = text-align
+ 
+ Modifiers:
+   -center: center align text
+   ** -left
+   ** -right;
+   ** -justify;
+   ** -justify-all;
+   ** -start;
+   ** -end;
+   ** -match-parent;
+*/
+.ta-center { text-align: center; }
+
+
+/*
+ FLOATS
+  
+ Base:
+   fl = float
+ 
+ Modifiers:
+   l = left
+*/
+.fll { float: left; }
+
+/*
+ COORDINATES
+
+ Base:
+   top
+   ** bottom
+   left
+   ** right
+ 
+ Modifiers
+   -0 = literal 0
+
+*/
+top-0 { top: 0 }
+left-0 { left: 0 }
+
+/*
+ 
+  HEIGHTS
+
+  Base:
+    h  = height
+    vh = vertical screen height
+
+  Modifiers:
+    -100 = 100%
+    -75  = 75%
+    -66  = 66%
+    -50  = 50%
+    -33  = 33%
+    -25  = 25%
+
+*/
+.h-25 { height: 25%; }
+.h-33 { height: 33%; }
+.h-50 { height: 50%; }
+.h-66 { height: 66%; }
+.h-75 { height: 75%; }
+.h-100 { height: 100%; }
+
+.vh-25 { height: 25vh; }
+.vh-33 { height: 33vh; }
+.vh-50 { height: 50vh; }
+.vh-66 { height: 66vh; }
+.vh-75 { height: 75vh; }
+.vh-100 { height: 100vh; }
+.min-vh-100 { min-height: 100vh; }
+
+/*
+ 
+  WIDTH
+
+  Base:
+    w = width
+
+  Modifiers:
+    -third = 100% / 3
+    -two-thirds = 100% / 1.5
+    ** -10 = 10%
+    ** -20 = 20%
+    ** ..
+    -100 = 100%
+
+*/
+.w-third { width: calc(100% / 3); }
+.w-two-thirds { width: calc(100% / 1.5); }
+
+.w-100 { width: 100%; }
+
+
+/*
+ 
+ OVERFLOW
+
+ Base:
+   ** ov = overflow
+   ov-y = overflow in y direction 
+   ** ov-x = overflow in x direction
+
+ Modifiers:
+   ** -visible = Content is not clipped
+   ** -hidden  = Content is clipped, with no scrollbars
+   -scroll  = Content is clipped, with scrollbars
+   ** -auto    = Let the browser decide
+
+*/
+.ov-y-scroll { overflow-y: scroll; }
+
+
+/*
+   SPACING
+
+   An eight step multiple of two scale ranging from 0 to 16rem.
+
+   Base:
+     p = padding
+     ** m = margin
+
+   Modifiers:
+     a = all
+     h = horizontal
+     v = vertical
+     ** t = top
+     ** r = right
+     ** b = bottom
+     ** l = left
+
+     0 = none
+     1 = 1st step in spacing scale, .25rem
+     2 = 2nd step in spacing scale, .5rem
+     ** 3 = 3rd step in spacing scale, 1rem
+     ** 4 = 4th step in spacing scale, 2rem
+     ** 5 = 5th step in spacing scale, 4rem
+     ** 6 = 6th step in spacing scale, 8rem
+     ** 7 = 7th step in spacing scale, 16rem
+*/
+.pl0 { padding: 0; }
+.pl1 { padding: .25rem; }
+.pl2 { padding: .5rem; }
+.pl3 { padding: 1rem; }
+
+.pa0 { padding: 0; }
+.pa1 { padding: .25rem; }
+.pa2 { padding: .5rem; }
+
+.pv0 { padding-top: 0; padding-bottom: 0; }
+.pv1 { padding-top: .25rem; padding-bottom: .25rem; }
+.pv2 { padding-top: .5rem; padding-bottom: .5rem; }
+
+.ph2 { padding-left: 0; padding-right: 0; }
+.ph1 { padding-left: .25rem; padding-right: .25rem; }
+.ph2 { padding-left: .5rem; padding-right: .5rem; }
+.ph3 { padding-left: 1rem; padding-right: 1rem; }
+.ph4 { padding-left: 2rem; padding-right: 2rem; }
+
+
+/*
+
+ UTILITIES
+
+*/
+.center { margin-right: auto; margin-left: auto; }
+.link { text-decoration: none; }
+.link:link, .link:visited { }
+.link:hover { text-decoration: underline; }
+.link:active {}
+.link:focus {}
+
+/*
+ 
+  LISTS
+*/
+.list { list-style-type: none; }

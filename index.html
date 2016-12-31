@@ -2,10 +2,70 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./static/css/normalize.css">
+  <link rel="stylesheet" href="./static/css/course-pages.css">
   <title>Course Pages</title>
-  
 </head>
 <body>
-  <h1>HEllo World</h1>
+  <!-- The sidebar takes 1/3 of the width -->
+  <nav class="fixed w-third top-0 left-0 vh-100 ov-y-scroll fll bg-blue">
+  <header class="ph3">
+    <h1 class="f1 fw-b white">CSC488</h1>
+    <h2 class="f2 fw-m white">Compilers and Interpreters</h2>
+    <h3 class="f3 fw-m white">Winter 2016</h3>
+  </header>
+  <div class="w-100">
+    <div class="ta-center">
+      <input class="ta-center f5 pv1 ph2"
+             type="text"
+             name="sidebar-input"
+             id="sidebar-input"
+             placeholder="filter"
+             value="" />
+    </div>
+    <ul class="list" id="sidebar-search">
+        <li class="pv2"><a class="link" href="#!">Announcements</a></li>
+        <li class="pv2"><a class="link" href="#!">Calendar</a></li>
+        <li class="pv2"><a class="link" href="#!">Syllabus</a></li>
+        <li class="pv2"><a class="link" href="#!">Lectures</a></li>
+        <li class="pv2"><a class="link" href="#!">Instructors and TAs</a></li>
+        <li class="pv2"><a class="link" href="#!">Office Hours</a></li>
+        <li id="sb-sublist" class="pv2">
+          <a class="link" href="#!">Assignments</a>
+          <ul>
+          <li class="pv2"><a class="link" href="#!">Assignment 1</a></li>
+          <li class="pv2"><a class="link" href="#!">Assignment 2</a></li>
+          <li class="pv2"><a class="link" href="#!">Assignment 3</a></li>
+          <li class="pv2"><a class="link" href="#!">Assignment 4</a></li>
+          </ul>
+        </li>
+        <li class="pv2">
+          <a class="link" href="#!">Tests and Exams</a>
+          <ul>
+          <li class="pv2"><a class="link" href="#!">Midterm 1</a></li>
+          <li class="pv2"><a class="link" href="#!">Midterm 2</a></li>
+          <li class="pv2"><a class="link" href="#!">Final Exam</a></li>
+          </ul>
+        </li>
+        <li class="pv2"><a class="link" href="#!">Grades</a></li>
+        <li class="pv2"><a class="link" href="#!">Resources</a></li>
+        <li class="pv2"><a class="link" href="#!">Feedback</a></li>
+        <li class="pv2"><a class="link" href="#!">Piazza</a></li>
+        <li class="pv2"><a class="link" href="#!">Markus</a></li>
+    </ul>
+  </div>
+</nav>
+  <section class="w-two-thirds fll vh-100 ov-y-scroll">
+    <!-- 
+      Include things here
+    -->
+    <h1 class="f2 fw-b pl3">Home</h1>
+  </section>
+
+  <script src="./static/js/filter.js"></script>
+  <!-- <script src="/static/js/current-week.js"></script> -->
 </body>
 </html>

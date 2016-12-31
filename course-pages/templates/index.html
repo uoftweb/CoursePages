@@ -2,13 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./static/css/normalize.css">
+  <link rel="stylesheet" href="./static/css/course-pages.css">
   <title>Course Pages</title>
 </head>
 <body>
   <!-- The sidebar takes 1/3 of the width -->
   {% include 'sidebar.html' %}
-  <section class="w-two-thirds">
-    <h2 class="">Hello</h2>
+  <section class="w-two-thirds fll vh-100 ov-y-scroll">
+    <!-- 
+      Include things here
+    -->
+    <h1 class="f2 fw-b pl3">Home</h1>
   </section>
+
+  <script src="./static/js/filter.js"></script>
+  <!-- <script src="/static/js/current-week.js"></script> -->
 </body>
 </html>
