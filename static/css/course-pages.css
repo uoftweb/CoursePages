@@ -9,11 +9,16 @@
    bg-`color name` = Background Colors
 */
 /* Text Colors */
-.white { color: #fff; }
+.grey-80 { color: rgba(113, 124, 137, 0.8); }
+.gray-80 { color: rgba(113, 124, 137, 0.8); }
+.black { color: #111111; }
 .gray { color: #717C89;  }
 .grey { color: #717C89;  }
+.blue { color: #7BA4D9; }
 /* Background Colors */
 .bg-blue { background-color: #7BA4D9; }
+.bg-blue-50 { background-color: rgba(123, 164, 217, 0.5); }
+.bg-ghost-white { background-color: #F8F8FF; }
 
 
 /*
