@@ -16,6 +16,34 @@ Something about the sidebar layout
 <h3 class="f3 fw-b">Main</h3>
 </main>
 ```
+<style>
+.page {
+  width: 100%;
+  height: 350px;
+  margin: 1px solid black;
+}
+.fixed { position: fixed; }
+.w-third { width: 33%; }
+.w-two-third { width: 66%; }
+.top-0 { top: 0 }
+.left-0 { left: 0 }
+.h-100 { height: 100%; }
+.fl-l { float: left; }
+.bg-ghost-white { background-color: #F8F8FF; }
+.f3 { font-size: 2rem; }
+.fw-b { font-weight: 700 }
+.fw-m { font-weight: 500 }
+.ph3 { padding-right: .5rem; padding-left: .5rem; }
+</style>
+
+<div class="page">
+<div class="fixed w-third top-0 left-0 h-100 fll bg-ghost-white">
+<p class="f2 fw-m ph3">Title</p>
+</div>
+<div class="w-two-third fll vh-100">
+<p class="f3 fw-b pl3">Main</p>
+</div>
+</div>
 
 ## Links
 Maybe a link to how to enable filter on list elements?
