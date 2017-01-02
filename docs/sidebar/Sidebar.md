@@ -20,7 +20,7 @@ Something about the sidebar layout
 .page {
   width: 100%;
   height: 350px;
-  margin: 1px solid black;
+  border: 1px solid black;
 }
 .w-third { width: 33%; }
 .w-two-third { width: 66%; }
