@@ -22,7 +22,6 @@ Something about the sidebar layout
   height: 350px;
   margin: 1px solid black;
 }
-.fixed { position: fixed; }
 .w-third { width: 33%; }
 .w-two-third { width: 66%; }
 .top-0 { top: 0 }
