@@ -106,3 +106,5 @@ node_modules
 # *.epub
 # *.mobi
 # *.pdf
+#
+.DS_Store
