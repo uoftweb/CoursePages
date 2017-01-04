@@ -159,116 +159,47 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="course-pages">Course Pages</h1>
-<h2 id="dependencies">Dependencies</h2>
-<p>All the dependencies are listed in <code>requirements.txt</code>.</p>
-<p>If you&apos;re using pip, you can run <code>pip install -r requirements.txt</code></p>
-<p>If you&apos;re using easy_install, run <code>easy_install $(cat requirements.txt)</code> (using bash)</p>
-<p>Otherwise follow the instructions below</p>
+<p>This a project developed by the Web Development Club at the University of
+Toronto in an attempt to create a consistent style for course pages not hosted
+on blackboard (which tends to happen in the Math and Computer Science departments).</p>
+<h2 id="contributors">Contributors:</h2>
 <ul>
-<li><a href="http://jinja.pocoo.org/docs/dev/intro/#installation" target="_blank">Jinja Installation Guide</a></li>
-<li><a href="https://github.com/Ceasar/easywatch" target="_blank">EasyWatch (optional)</a></li>
+<li>List</li>
+<li>Of</li>
+<li>Contributors</li>
 </ul>
-<h2 id="how-to-get-final-html">How to get final html</h2>
-<p>Run <code>build.py</code> and the <code>index.html</code> file in the same directory will be updated with the content
-from <code>course-pages/templates</code>.</p>
-<p>If you want the script to watch for changes, (auto reload <code>index.html</code> when saving a file in <code>course-pages/templates</code>),
-run <code>python build.py --watch</code></p>
-<h2 id="how-to-make-a-component">How to make a component</h2>
-<p>Create an html file in <code>course-pages/templates</code>. Suppose you create <code>course-pages/templates/sidebar.html</code>, then in <code>course-pages/templates/index.html</code>, you should add the reference to the sidebar, as follows:</p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- 
-  index.html stuff 
+<h2 id="usage">Usage</h2>
+<p>Download the starter pack here <a href="#!">TODO: LINK</a>. This will provide you with a directory that
+contains an empty <code>index.html</code> page that references the CSS and JS you will see in this
+documentation. The structure is as follows</p>
+<pre><code>index.html
+static/
+  css/
+    main.css
+  js/
+    sidebar.js
+    current-week.js
+</code></pre><p>You can copy and paste any of the HTML and CSS provided and insert it into your
+index.html page. We recommend the following layout for a complete site</p>
+<pre><code>index.html
+sections/
+  assignments/
+    assignment1.html
+    assignment2.html
+    ...
+  lectures/
+    lecture1.pdf
+    lecture2.pdf
+    ...
+  syllabus.html
   ...
---&gt;</span>
-{% extends &quot;sidebar.html&quot; %}
-<span class="hljs-comment">&lt;!-- 
-  more index.html stuff
-  ...
---&gt;</span>
-</code></pre>
-<p>Note that only index.html should contian <code>head</code>, <code>doctype</code>, and <code>body</code> tags. Everything in a 
-component &quot;assumes&quot; that it is in index.html</p>
-<h2 id="css">CSS</h2>
-<p>CSS should go in <code>static/css</code>, and should follow a &quot;functional&quot; method, which allows for
-greater reusability. Please read <a href="http://mrmrs.io/writing/2016/03/24/scalable-css/" target="_blank">this</a>
-for an idea of why we are taking this approach; <a href="http://tachyons.io" target="_blank">Tachyons</a> and <a href="http://basscss.com/" target="_blank">BassCSS</a>
-are some pretty good references.</p>
-<p>A CSS class name should say exactly <em>what</em> is being done, and composition of class names
-in HTML should tell us what it will <em>look</em> like. For example:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fixed top-0 left-0
-            h-100 w-third overflow-y-scroll
-            fl bg-blue&quot;</span>&gt;</span>
-  ...
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-<pre><code class="lang-css"><span class="hljs-selector-class">.fixed</span> { <span class="hljs-attribute">position</span>: fixed; }
-<span class="hljs-selector-class">.top-0</span> { <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>; }
-<span class="hljs-selector-class">.left-0</span> { <span class="hljs-attribute">letf</span>: <span class="hljs-number">0</span>; }
-<span class="hljs-selector-class">.h-100</span> { <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>; }
-<span class="hljs-selector-class">.w-third</span> { <span class="hljs-attribute">width</span>: <span class="hljs-built_in">calc</span>(100% / 3); }
-<span class="hljs-selector-class">.fl</span> { <span class="hljs-attribute">float</span>: left; }
-<span class="hljs-selector-class">.bg-blue</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#357EDD</span> }
-<span class="hljs-selector-class">.overflow-y-scroll</span> { <span class="hljs-attribute">overflow-y</span>:scroll; }
-</code></pre>
-<p>Unfortunatley, this makes the HTML a bit ugly, but the advantage
-in the CSS is that we shouldn&apos;t have any bugs that come from classes
-overwriding each other.</p>
-<p>This also makes our CSS file very easy to document and maintain. For example, the
-above CSS would be broken into sections as follows</p>
-<pre><code class="lang-css">
-/*
-  COLORS
-
-  Classes for setting foreground and background colors on elements.
-
-*/
-
-/* Background Colors */
-.bg-black { background-color: #333 }
-.bg-blue { background-color: #357EDD }
-.bg-red { ... }
-.bg-green { ... }
-...
-
-/* Text Colors */
-.black { color: #333 }
-.blue { color: #357EDD }
-.red { ... }
-.green { ... }
-...
-
-/*
-  HEIGHTS
-
-  Base:
-    h  = height
-    vh = vertical screen height
-
-  Modifiers:
-    -25   = literal value 25%
-    -50   = literal value 50%
-    -75   = literal value 75%
-    -100  = literal value 100%
-
-    1 = 1st step in height scale
-    2 = 2nd step in height scale
-    3 = 3rd step in height scale
-    4 = 4th step in height scale
-    5 = 5th step in height scale
-
-*/
-h-100 { height: 100% }
-h-50 { height: 50% }
-...
-h1 { height: 1rem;  }
-h2 { height: 2rem;  }
-h3 { height: 4rem;  }
-h4 { height: 8rem;  }
-h5 { height: 16rem; }
-...
-</code></pre>
-<p>And so on. This way we standardize our CSS and make it really easy to read, use, and document.</p>
-<p>If you disagree with this approach (and this is still a bit controversial, since it does force clutter
-on the HTML, create a new <a href="https://github.com/uoftweb/CoursePages/issues" target="_blank">issue</a></p>
+static/
+  css/
+    main.css
+  js/
+    sidebar.js
+    current-week.js
+</code></pre><p>Make sure that all HTML files have link to <code>main.css</code></p>
 
                                 
                                 </section>
@@ -308,7 +239,7 @@ on the HTML, create a new <a href="https://github.com/uoftweb/CoursePages/issues
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Sidebar","level":"1.2","depth":1,"path":"sidebar/Sidebar.md","ref":"sidebar/Sidebar.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"README.md","mtime":"2017-01-02T01:31:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-02T07:42:04.666Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Sidebar","level":"1.2","depth":1,"path":"sidebar/Sidebar.md","ref":"sidebar/Sidebar.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"README.md","mtime":"2017-01-04T23:57:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-04T23:57:04.988Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

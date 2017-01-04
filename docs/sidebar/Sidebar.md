@@ -1,7 +1,5 @@
 # Sidebar
 
-Something about the sidebar layout
-
 ## HTML
 
 ```html
