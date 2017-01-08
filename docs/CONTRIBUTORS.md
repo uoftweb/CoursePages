@@ -1,1 +1,4 @@
-# Alisia
+# Contributors
+
+- Alisia
+- Cheryl
