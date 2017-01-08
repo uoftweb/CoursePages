@@ -2,7 +2,25 @@
 
 ## HTML
 
+```css
+/* CSS for sidebar option 1 */
+.sidebar {
+  position: fixed;
+  width: (100% / 3);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  float: left;
+  background-color: #F8F8FF
+}
+```
+
 ```html
+<!-- sidebar option 1 -->
+<section class="sidebar">
+  <h1 class="f1 fw-m">Sidebar</h1>
+</section>
 <!-- sidebar -->
 <section class="fixed w-third top-0 left-0 vh-100 ov-y-scroll fll bg-ghost-white">
 <header class="pl3">
