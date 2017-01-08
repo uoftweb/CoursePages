@@ -1,5 +1,4 @@
 from jinja2 import Environment, PackageLoader
-import easywatch
 import os
 import sys
 
@@ -39,6 +38,7 @@ if __name__ == '__main__':
     else:
         # if argv = [command name, --watch, ...]
         if len(sys.argv) > 1 and sys.argv[1] == '--watch':
+            import easywatch
             print("Watching course-pages/templates for changes")
             print("Ctrl-c to quit")
             easywatch.watch('./course-pages/templates', handler)
