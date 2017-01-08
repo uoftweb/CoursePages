@@ -43,4 +43,4 @@ if __name__ == '__main__':
             print("Ctrl-c to quit")
             easywatch.watch('./course-pages/templates', handler)
         else:
-            build('course-pages', 'templates', 'index.html', '.', 'index.html')
+            build('course-pages', 'templates', 'index.html', '.', 'output.html')
