@@ -29,7 +29,7 @@ def handler(event_type, src_path):
 
     if event_type != 'moved':
         print('detected a change in ' + src_path)
-        build('course-pages', 'templates', 'index.html', '.', 'index.html')
+        build('course-pages', 'templates', 'index.html', '.', 'output.html')
 
 
 if __name__ == '__main__':
