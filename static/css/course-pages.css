@@ -227,7 +227,7 @@ left-0 { left: 0 }
 
 /*
 
- UTILITIES
+  UTILITIES
 
 */
 .center { margin-right: auto; margin-left: auto; }
@@ -239,6 +239,24 @@ left-0 { left: 0 }
 
 /*
  
-  LISTS
+   LISTS
 */
 .list { list-style-type: none; }
+
+
+/*
+
+   BORDERS
+
+   Modifiers:
+     1 = 1px thick
+     2 = 2px thick
+     3 = 3px thick     
+*/
+
+
+.border-collapse { border-collapse: collapse; } 
+
+.border-1 { border: 1px solid; }
+.border-2 { border: 2px solid; }
+.border-3 { border: 3px solid; } 
