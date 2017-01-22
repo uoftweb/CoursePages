@@ -12,14 +12,15 @@
 <body>
   <!-- The sidebar takes 1/3 of the width -->
   {% include 'sidebar.html' %}
-  
+
   <section class="w-two-thirds fll vh-100 ov-y-scroll">
-    <!-- 
+    <!--
       Include things here
     -->
-    <h1 class="f2 fw-b pl3">Home</h1>
-    
-    <h2 class="f2 fw-b pl3">Course Calendar</h2> 
+    {% include 'coursedescription.html'%}
+    <!--<h1 class="f2 fw-b pl3">Home</h1>-->
+
+    <h2 class="f2 fw-b pl3">Course Calendar</h2>
     <!-- how to make this heading smaller? -->
       {% include 'calendar.html'%}
   </section>
