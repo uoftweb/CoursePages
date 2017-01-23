@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="./static/css/normalize.css">
+  <link rel="stylesheet" href="./static/css/tachyons.css">
   <link rel="stylesheet" href="./static/css/course-pages.css">
   <title>Course Pages</title>
 </head>
@@ -13,16 +14,12 @@
   <!-- The sidebar takes 1/3 of the width -->
   {% include 'sidebar.html' %}
 
-  <section class="w-two-thirds fll vh-100 ov-y-scroll">
+  <section class="w-two-thirds fl vh-100 ov-y-scroll">
     <!--
       Include things here
     -->
     {% include 'coursedescription.html'%}
-    <!--<h1 class="f2 fw-b pl3">Home</h1>-->
-
-    <h2 class="f2 fw-b pl3">Course Calendar</h2>
-    <!-- how to make this heading smaller? -->
-      {% include 'calendar.html'%}
+    {% include 'calendar.html'%}
   </section>
 
   <script src="./static/js/filter.js"></script>
