@@ -1,4 +1,17 @@
 /*
+ * Composes functions together, like so
+ *
+ * ```
+ * > const f = compose(f1, f2, f3, f4)
+ * > const result = f(1)
+ * > result === f1(f2(f3(f4(x))))
+ * True
+ * ```
+ */
+const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
+
+
+/*
  * Initialize a list of the list elements under the id
  * 'sidebar-search'
  *
@@ -24,6 +37,7 @@ const initSideBarList = () => {
 
   return liElements
 }
+
 
 /*
  * Filter `originalList` (a list of {text, li}) based on
@@ -65,47 +79,24 @@ const replaceSideBarList = (newLi) => {
   }
 }
 
-/*
- * Return a function that takes in a keypress and
- * and replaces the sidebar based on the result of the keypress
- *
- * Note that this does not mutate `constantLiList`
- *
- * {text: string, li: li}[] => (char => bool)
- */
-const getSideBarHandler = (constantLiList) => {
-  return (keypress) => {
-    const input = document.getElementById('sidebar-input')
-
-    // get a char or a backspace
-    const code = keypress.charCode || keypress.keyCode
-    const nextChar = String.fromCharCode(keypress.charCode) || ''
-    const prevString = input.value || ''
-    let nextString = prevString + nextChar
-    // backspace
-    if (code === 8) {
-      nextString = prevString.slice(0, prevString.length - 1)
-    }
-
-    const newLi = filterSideBarList(constantLiList, nextString)
-
-    replaceSideBarList(newLi)
-
-    return true
-  }
-}
 
 window.onload = () => {
-  // get a data structure representing the sidebar
+
+  // get a list representing the sidebar
   const sideBarList = initSideBarList()
 
-  // sideBarHandler returns a function that uses `sideBarList`
-  const sideBarHandler = getSideBarHandler(sideBarList)
+  // gets text field data when called
+  const getInput = () => document.getElementById('sidebar-input').value
 
   // this is where the user inputs text
   const sideBarInput = document.getElementById('sidebar-input')
 
-  // Whenever a keypress/keydown happens, we pass it into the `sideBarHandler`
-  sideBarInput.onkeypress = keypress => sideBarHandler(keypress)
-  sideBarInput.onkeydown = keydown => sideBarHandler(keydown)
+  // calls filterSideBarList and passes its return to replaceSideBarList
+  const generateSideBar = compose(
+    replaceSideBarList,
+    () => filterSideBarList(sideBarList, getInput())
+  )
+
+  // Whenever a keypress/keydown happens we generate a new sidebar.
+  sideBarInput.oninput = () => generateSideBar()
 }
