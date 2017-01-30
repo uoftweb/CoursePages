@@ -56,7 +56,8 @@ do the following:
      code delimiters.
   3. Go to [jsfiddle](https://jsfiddle.net/)
   4. Place the below in the `html` section, substituting the html in `component.html` for the text "place content of ...".
-  ```
+  
+  ```html
   <div>
     <nav class="sticky w-third top-0 left-0 vh-100 overflow-y-scroll fl bg-washed-blue">
       <header class="ph3">
@@ -74,8 +75,9 @@ do the following:
      link: `https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css`. This will
      add the tachyons library.
   6. Click save.
-  7. Add the following after the closing code delimiter in the markdown file. 
-  ```
+  7. Add the following after the closing code delimiter in the markdown file.
+  
+  ```html
   <iframe
     style="width: 100%; height: 300px; border: none"
     src="http://jsfiddle.net/REPLACE/embedded/">
