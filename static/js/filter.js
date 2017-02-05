@@ -91,14 +91,12 @@ window.onload = () => {
   // this is where the user inputs text
   const sideBarInput = document.getElementById('sidebar-input')
 
-  // creates a new unary function that passes its first argument to
-  // `getNewTextString`, and pipes that result to the functions above it.
+  // calls filterSideBarList and passes its return to replaceSideBarList
   const generateSideBar = compose(
     replaceSideBarList,
-    (sideBarString) => filterSideBarList(sideBarList, getInput())
-    // getSideBarString
+    () => filterSideBarList(sideBarList, getInput())
   )
 
   // Whenever a keypress/keydown happens we generate a new sidebar.
-  sideBarInput.oninput = input => generateSideBar(input)
+  sideBarInput.oninput = () => generateSideBar()
 }
