@@ -173,6 +173,7 @@
                                 
                                 <h1 id="sidebar">Sidebar</h1>
 <h2 id="html">HTML</h2>
+<<<<<<< HEAD
 <p>The sidebar </p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sticky w-third top-0 left-0 vh-100 overflow-y-scroll fl bg-washed-blue&quot;</span>&gt;</span>
@@ -185,6 +186,34 @@
     <span class="hljs-comment">&lt;!-- place content of `component.html` here --&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+=======
+<pre><code class="lang-css"><span class="hljs-comment">/* CSS for sidebar option 1 */</span>
+<span class="hljs-selector-class">.sidebar</span> {
+  <span class="hljs-attribute">position</span>: fixed;
+  <span class="hljs-attribute">width</span>: (<span class="hljs-number">100%</span> / <span class="hljs-number">3</span>);
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+  <span class="hljs-attribute">overflow-y</span>: scroll;
+  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F8F8FF</span>
+}
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- sidebar option 1 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sidebar&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f1 fw-m&quot;</span>&gt;</span>Sidebar<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- sidebar --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fixed w-third top-0 left-0 vh-100 ov-y-scroll fll bg-ghost-white&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pl3&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f1 fw-m&quot;</span>&gt;</span>Sidebar<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- main content --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;w-two-third fll vh-100&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f3 fw-b&quot;</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+>>>>>>> e89876dabe2b6ec6ed9cf096fb64d183b60071d2
 </code></pre>
 <iframe style="width: 100%; height: 300px; border: none" src="http://jsfiddle.net/z9gde7g5/embedded/"></iframe>
 
@@ -230,7 +259,11 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
+<<<<<<< HEAD
             gitbook.page.hasChanged({"page":{"title":"Sidebar","level":"1.3","depth":1,"previous":{"title":"Contributors","level":"1.2","depth":1,"path":"CONTRIBUTORS.md","ref":"CONTRIBUTORS.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"sidebar/Sidebar.md","mtime":"2017-02-05T21:53:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-05T21:53:29.379Z"},"basePath":"..","book":{"language":""}});
+=======
+            gitbook.page.hasChanged({"page":{"title":"Sidebar","level":"1.3","depth":1,"previous":{"title":"Contributors","level":"1.2","depth":1,"path":"CONTRIBUTORS.md","ref":"CONTRIBUTORS.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"sidebar/Sidebar.md","mtime":"2017-01-08T22:39:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-08T22:39:12.787Z"},"basePath":"..","book":{"language":""}});
+>>>>>>> e89876dabe2b6ec6ed9cf096fb64d183b60071d2
         });
     </script>
 </div>
