@@ -22,4 +22,14 @@ Too many sub-headlines may confuse your readers.
 <h4 class="f3">Recommended Smallest</h4>
 ```
 
+## Paragraph
+
+Paragraph text should have _line height_ and _measure_. Line height is the
+spacing between lines, while measure is how wide a line is. We recommend
+1.5 line height and a wide measure to ensure easy readability.
+
+```html
+<p class="measure-wide lh-copy">Text goes here</p>
+```
+
 
