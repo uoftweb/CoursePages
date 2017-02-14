@@ -32,4 +32,10 @@ spacing between lines, while measure is how wide a line is. We recommend
 <p class="measure-wide lh-copy">Text goes here</p>
 ```
 
+For large screen sizes, we recommend that it have a margin left of the screen
+or sidebar, like so:
+
+```html
+<p class="ml5 measure-wide lh-copy">Text goes here</p>
+```
 
