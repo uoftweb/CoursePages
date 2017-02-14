@@ -2,17 +2,17 @@
 
 ## HTML
  
-The sidebar 
-
+Make sure to include the tachyons source file. See the [Getting Started](getting-started.md) guide for help
 ```html
 <div>
-  <nav class="sticky w-third top-0 left-0 vh-100 overflow-y-scroll fl bg-washed-blue">
+  <nav class="sticky w-25 top-0 left-0 vh-100 overflow-y-scroll fl bg-washed-blue">
     <header class="ph3">
-      <h1 class="f1 fw5 black">CSC488</h1>
-      <h2 class="f2 fw5 gray">Compilers and Interpreters</h2>
-      <h3 class="f3 fw5 gray-80">Winter 2016</h3> </header>
+      <h1 class="f1 fw5 black">CSCXYZ</h1>
+      <h2 class="f2 fw5 gray">COURSE TITLE</h2>
+      <h3 class="f3 fw5 gray-80">TERM YEAR</h3>
+    </header>
   </nav>
-  <section class="w-two-thirds fl vh-100 ov-y-scroll bg-white">
+  <section class="w-75 fl vh-100 ov-y-scroll bg-white">
     <!-- place content of `component.html` here -->
   </section>
 </div>
