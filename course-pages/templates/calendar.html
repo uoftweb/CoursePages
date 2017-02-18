@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html>
 
 <link rel="stylesheet" href="./static/css/course-pages.css">
@@ -8,7 +7,7 @@
 <head>
 <style>
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #3366cc;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -17,7 +16,7 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: #1f3d7a;
 }
 #myInput {
     border-box: box-sizing;
@@ -62,20 +61,26 @@
 
 <!--Dropdown-->
 <div class="Show Specific Week">
-<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+<button onclick="myFunction()" class="dropbtn">Select a Week</button>
   <div id="WeekFilter" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#about">About</a>
-    <a href="#base">Base</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#custom">Custom</a>
-    <a href="#support">Support</a>
-    <a href="#tools">Tools</a>
+    <a href="#menu-week1" onclick="ToggleVisibility('Week1')">Week 1</a>
+    <a href="#menu-week2" onclick="ToggleVisibility('Week2')">Week 2</a>
+    <a href="#menu-week3" onclick="ToggleVisibility('Week3')">Week 3</a>
+    <a href="#menu-week4" onclick="ToggleVisibility('Week4')">Week 4</a>
+    <a href="#menu-week5" onclick="ToggleVisibility('Week5')">Week 5</a>
+    <a href="#menu-week6" onclick="ToggleVisibility('Week6')">Week 6</a>
+    <a href="#menu-week7" onclick="ToggleVisibility('Week7')">Week 7</a>
+    <a href="#menu-week8" onclick="ToggleVisibility('Week8')">Week 8</a>
+    <a href="#menu-week9" onclick="ToggleVisibility('Week9')">Week 9</a>
+    <a href="#menu-week10" onclick="ToggleVisibility('Week10')">Week 10</a>
+    <a href="#menu-week11" onclick="ToggleVisibility('Week11')">Week 11</a>
+    <a href="#menu-week12" onclick="ToggleVisibility('Week12')">Week 12</a>
+
   </div>
 </div>
 
 <script>
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -100,7 +105,7 @@ function filterFunction() {
 
 
 <!-- Weeks -->
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week1">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week1">
   <h2>Week 1</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -120,7 +125,7 @@ function filterFunction() {
     </div>
 </div>
 
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week2">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em;display: none;" id="Week2">
   <h2>Week 2</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -140,7 +145,7 @@ function filterFunction() {
     </div>
 </div>
 
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week3">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week3">
   <h2>Week 3</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -159,7 +164,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week4">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week4">
   <h2>Week 4</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -178,7 +183,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week5">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week5">
   <h2>Week 5</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -197,7 +202,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week6">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week6">
   <h2>Week 6</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -216,7 +221,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week7">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week7">
   <h2>Week 7</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -235,7 +240,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week8">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week8">
   <h2>Week 8</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -255,7 +260,7 @@ function filterFunction() {
     </div>
 </div>
 
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week9">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week9">
   <h2>Week 9</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -274,7 +279,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week10">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week10">
   <h2>Week 10</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -293,7 +298,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week11">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week11">
   <h2>Week 11</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -312,7 +317,7 @@ function filterFunction() {
       </ul>
     </div>
 </div>
-<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week12">
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week12">
   <h2>Week 12</h2>
   <div style="padding-left: 4em;">
     <h3>Date<h3>
@@ -339,7 +344,22 @@ function filterFunction() {
 <!--  Is this how you have parameters in JS???-->
 <script>
 function ToggleVisibility(week) {
-    document.getElementById(week).style.visibility = "hidden";
+    //if it's invisible, make it visible
+     if (document.getElementById(week).style.display == "none")
+     {
+         document.getElementById(week).style.display = "block";
+     }
+     else{
+         document.getElementById(week).style.display = "none";
+     }
+}
+</script>
+
+<script>
+function setup(week) {
+
+         document.getElementById(week).style.display = "block";
+
 }
 </script>
 
