@@ -1,38 +1,346 @@
-<table class="w-100 border-collapse ta-center">
-  <tr class="bg-light-blue">
-    <td class="fw-b border-1 pa3">Week</td>
-    <td class="fw-b border-1 pa3">Date</td>
-    <td class="fw-b border-1 pa3">Topic</td>
-    <td class="fw-b border-1 pa3">Readings</td>
-    <td class="fw-b border-1 pa3">Notes</td>
-  </tr>
-  <tr id="Week1" style="background-color:#ccffff">
-    <td class="border-1 pa1">1</td>
-    <td class="border-1 pa1">6 Jan</td>
-    <td class="border-1 pa1">Course info<br>Intro to compilers</td>
-    <td class="border-1 pa1">1.1, 1.2</td>
-    <td class="border-1 pa1"></td>
-  </tr>
-  <tr id="Week2" style="background-color:#ccfacc">
-    <td class="border-1 pa1">2</td>
-    <td class="border-1 pa1">9 Jan</td>
-    <td class="border-1 pa1">This example has totally random colours in it right now. Will change later</td>
-    <td class="border-1 pa1">1.3-1.5</td>
-    <td class="border-1 pa1"></td>
-  </tr>
-  <tr id="Week3" style="background-color:#ccfadc">
-    <td class="border-1 pa1">3</td>
-    <td class="border-1 pa1">9 Jan</td>
-    <td class="border-1 pa1">Compiler design</td>
-    <td class="border-1 pa1">1.3-1.5</td>
-    <td class="border-1 pa1"></td>
-  </tr>
-  <tr>
-<tr id="Week4" style="background-color:#cbfacb">
-    <td class="border-1 pa1">4</td>
-    <td class="border-1 pa1">9 Jan</td>
-    <td class="border-1 pa1">Compiler design</td>
-    <td class="border-1 pa1">1.3-1.5</td>
-    <td class="border-1 pa1"></td>
-  </tr>
-</table>
+<html>
+
+<link rel="stylesheet" href="./static/css/course-pages.css">
+<link rel="stylesheet" href="./static/css/normalize.css">
+
+
+<head>
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+</style>
+</head>
+
+
+<body>
+
+<!--Dropdown-->
+<div class="Show Specific Week">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="WeekFilter" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("WeekFilter").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("WeekFilter");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+<!-- Weeks -->
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week1">
+  <h2>Week 1</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week2">
+  <h2>Week 2</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week3">
+  <h2>Week 3</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week4">
+  <h2>Week 4</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week5">
+  <h2>Week 5</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week6">
+  <h2>Week 6</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week7">
+  <h2>Week 7</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week8">
+  <h2>Week 8</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week9">
+  <h2>Week 9</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week10">
+  <h2>Week 10</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week11">
+  <h2>Week 11</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em" id="Week12">
+  <h2>Week 12</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<!--      Line for each of the week shower and hiders
+  <button onclick="displayResult()">Change text</button>
+-->
+
+
+<!--  Is this how you have parameters in JS???-->
+<script>
+function ToggleVisibility(week) {
+    document.getElementById(week).style.visibility = "hidden";
+}
+</script>
+
+</body>
+</html>
