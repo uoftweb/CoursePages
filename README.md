@@ -42,96 +42,48 @@ component "assumes" that it is in index.html
 
 ## CSS
 
-CSS should go in `static/css`, and should follow a "functional" method, which allows for
-greater reusability. Please read [this](http://mrmrs.io/writing/2016/03/24/scalable-css/)
-for an idea of why we are taking this approach; [Tachyons](http://tachyons.io) and [BassCSS](http://basscss.com/)
-are some pretty good references.
+We're now using [tachyons](http://tachyons.io) for CSS
 
-A CSS class name should say exactly _what_ is being done, and composition of class names
-in HTML should tell us what it will _look_ like. For example:
+## Documentation
 
-```html
-<div class="fixed top-0 left-0
-            h-100 w-third overflow-y-scroll
-            fl bg-blue">
-  ...
-</div>
-```
+If you create a component, say `component.html`, and you want to document it,
+do the following:
 
-```css
-.fixed { position: fixed; }
-.top-0 { top: 0; }
-.left-0 { letf: 0; }
-.h-100 { height: 100%; }
-.w-third { width: calc(100% / 3); }
-.fl { float: left; }
-.bg-blue { background-color: #357EDD }
-.overflow-y-scroll { overflow-y:scroll; }
-```
-
-Unfortunatley, this makes the HTML a bit ugly, but the advantage
-in the CSS is that we shouldn't have any bugs that come from classes
-overwriding each other.
-
-This also makes our CSS file very easy to document and maintain. For example, the
-above CSS would be broken into sections as follows
-
-```css
-
-/*
-  COLORS
-
-  Classes for setting foreground and background colors on elements.
-
-*/
-
-/* Background Colors */
-.bg-black { background-color: #333 }
-.bg-blue { background-color: #357EDD }
-.bg-red { ... }
-.bg-green { ... }
-...
-
-/* Text Colors */
-.black { color: #333 }
-.blue { color: #357EDD }
-.red { ... }
-.green { ... }
-...
-
-/*
-  HEIGHTS
-
-  Base:
-    h  = height
-    vh = vertical screen height
+  1. Go to the docs branch (`git checkout docs`)
+  2. Create a new file in `docs`, and reference it in `SUMMARY.md`.
+  3. Title it `# Component`, replaceing "Component" with your component name.
+  4. Write a short description of the component, then place the html for it in
+     code delimiters.
+  3. Go to [jsfiddle](https://jsfiddle.net/)
+  4. Place the below in the `html` section, substituting the html in `component.html` for the text "place content of ...".
   
-  Modifiers:
-    -25   = literal value 25%
-    -50   = literal value 50%
-    -75   = literal value 75%
-    -100  = literal value 100%
-
-    1 = 1st step in height scale
-    2 = 2nd step in height scale
-    3 = 3rd step in height scale
-    4 = 4th step in height scale
-    5 = 5th step in height scale
-
-*/
-h-100 { height: 100% }
-h-50 { height: 50% }
-...
-h1 { height: 1rem;  }
-h2 { height: 2rem;  }
-h3 { height: 4rem;  }
-h4 { height: 8rem;  }
-h5 { height: 16rem; }
-...
-
-```
-
-And so on. This way we standardize our CSS and make it really easy to read, use, and document.
-
-If you disagree with this approach (and this is still a bit controversial, since it does force clutter
-on the HTML, create a new [issue](https://github.com/uoftweb/CoursePages/issues)
+  ```html
+  <div>
+    <nav class="sticky w-third top-0 left-0 vh-100 overflow-y-scroll fl bg-washed-blue">
+      <header class="ph3">
+        <h1 class="f1 fw5 black">CSC488</h1>
+        <h2 class="f2 fw5 gray">Compilers and Interpreters</h2>
+        <h3 class="f3 fw5 gray-80">Winter 2016</h3>
+      </header>
+    </nav>
+    <section class="w-two-thirds fl vh-100 ov-y-scroll bg-white">
+      <!-- place content of `component.html` here -->
+    </section>
+  </div>
+  ```
+  5. Click on *External Resources* in the sidebar, and insert the following
+     link: `https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css`. This will
+     add the tachyons library.
+  6. Click save.
+  7. Add the following after the closing code delimiter in the markdown file.
+  
+  ```html
+  <iframe
+    style="width: 100%; height: 300px; border: none"
+    src="http://jsfiddle.net/REPLACE/embedded/">
+  </iframe>
+  ```
+  8. Replace "REPLACE" with the string at the end of the url, for example,
+     "nfs0k0bn"
+  9. Commit and push.
+  10. Go on GitHub and submit a pull request.
