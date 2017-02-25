@@ -39,3 +39,11 @@ or sidebar, like so:
 <p class="ml5 measure-wide lh-copy">Text goes here</p>
 ```
 
+## Links
+
+Links should always be colored blue. Blue for links is historic, and
+provides good contrast with white. The following is a snippet for links
+
+```html
+<a href="url goes here" class="link blue">Text</a>
+```
