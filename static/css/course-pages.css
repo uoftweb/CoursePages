@@ -1,1 +1,5 @@
 .bg-golden-brown { background-color: 	 rgba(194, 193, 49, 0.7)}
+
+@media (--breakpoint-not-small) {
+  dn-ns { display: none; }
+}
