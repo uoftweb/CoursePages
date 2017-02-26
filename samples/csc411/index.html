@@ -13,7 +13,7 @@
   <nav class="fixed w-25 top-0 left-0 vh-100 overflow-y-scroll fl bg-golden-brown">
     <header class="ph3">
       <h1 class="f1 fw5 black">CSC411</h1>
-      <h2 class="f2 fw5 gray">Machine Learning and Data Mining</h2>
+      <h2 class="f2 fw5 gray-80">Machine Learning and Data Mining</h2>
       <h3 class="f3 fw5 gray-80">Winter 2017</h3>
     </header>
     <div class="tc">
@@ -27,17 +27,32 @@
 
     <ul class="list f5" id="sidebar-search">
       <li class="pv2">
-				<a class="blue link">Home</a>
+				<a class="gray-80 link">Home</a>
 				<ul>
-					<li class="pv2"><a class="blue link">Syllabus</a></li>
-					<li class="pv2"><a class="blue link">Online vs On-Campus</a></li>
-					<li class="pv2"><a class="blue link">Home</a></li>
+					<li class="pv2"><a class="gray-80 link">About CSC411</a></li>
+					<li class="pv2"><a class="gray-80 link">Evaluation</a></li>
+					<li class="pv2"><a class="gray-80 link">Getting Help</a></li>
 				</ul>
 			</li>
-      <li class="pv2"><a class="blue link">Assignments</a></li>
-      <li class="pv2"><a class="blue link">PCRS</a></li>
-      <li class="pv2"><a class="blue link">Lectures</a></li>
-      <li class="pv2"><a class="blue link">Test/Exam</a></li>
+      <li class="pv2"><a class="gray-80 link">Teaching Team</a></li>
+      <li class="pv2">
+        <a class="gray-80 link">Course Material</a>
+        <ul>
+          <li class="pv2"><a class="gray-80 link">Study Guide</a></li>
+					<li class="pv2"><a class="gray-80 link">Lectures</a></li>
+					<li class="pv2"><a class="gray-80 link">Resources</a></li> 
+          <li class="pv2"><a class="gray-80 link">Software</a></li>  
+          <li class="pv2"><a class="gray-80 link">LaTeX</a></li>        
+				</ul>
+      </li>
+      <li class="pv2">
+        <a class="gray-80 link">Evaluations</a>
+        <ul>
+					<li class="pv2"><a class="gray-80 link">Projects</a></li>
+					<li class="pv2"><a class="gray-80 link">Midterm</a></li>
+          <li class="pv2"><a class="gray-80 link">Markus</a></li>
+				</ul>
+      </li>
 		</ul>
   </nav>
 
@@ -46,14 +61,26 @@
     height="150" alt="kandinsky">
 
   <section class="w-75 fr ph3 vh-100 ov-y-scroll bg-white">
-    <h1 class="f2 black-80">About CSC411</h1>
-    <p class="ml4 lh-copy measure-wide">
-    This course serves as a broad introduction to machine learning and data
-    mining. We will cover the fundamentals of supervised and unsupervised
-    learning. We will focus on neural networks, policy gradient methods in
-    reinforcement learning. We use the Python NumPy/SciPy stack. Students
-    should be comfortable with calculus, probability, and linear algebra.
-    </p></br>
+    <article class="cf">
+      <h1 class="f2 black-80">About CSC411</h1>
+      <div class="fl w-60">
+         <p class="ml4 lh-copy measure-wide">
+          This course serves as a broad introduction to machine learning and data
+          mining. We will cover the fundamentals of supervised and unsupervised
+          learning. We will focus on neural networks, policy gradient methods in
+          reinforcement learning. We use the Python NumPy/SciPy stack. Students
+          should be comfortable with calculus, probability, and linear algebra.
+          </p></br>
+      </div>
+      <div class="fl w-40">
+        <div class="img-with-text w-70">
+          <img src="http://www.cs.toronto.edu/~guerzhoy/411/neuralcat.png" alt="neuralcat" />
+          <small>"Nikulin & Novak, " 
+            <a href="https://arxiv.org/abs/1602.07188">Exploring the Neural Algorithm of Artistic Style</a></small>
+        </div>
+      </div>
+    </article>
+   
     <h2 class="f3 black-80">Required math background</h2>
     <p class="ml4 lh-copy measure-wide">
       Here's (roughly) the mawth that you need for this course. Linear Algebra:
@@ -80,13 +107,6 @@
           </li>
         <ul>
       </div>
-      <!-- <div class="fl w-20">
-        <ul class="list">
-          <li class="mb2">
-            <p class="lh-copy measure-wide">or:</p>
-          </li>
-        <ul>
-      </div> -->
       <div class="fl w-20">
         <ul class="list">
           <li class="mb2">
@@ -101,7 +121,7 @@
         </ul>
       </div>
     </article>
-    <p>You must receive at least 40% on the final exam to pass the course.</p>
+    <p>You must receive at least 40% on the final exam to pass the course.</p></br>
   </section>
 </div>
 <script src="../../static/js/filter.js"></script>

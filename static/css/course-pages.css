@@ -3,3 +3,12 @@
 @media (--breakpoint-not-small) {
   dn-ns { display: none; }
 }
+.img-with-text {
+    text-align: justify;
+    width: [width of img];
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
