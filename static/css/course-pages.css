@@ -11,3 +11,18 @@
     display: block;
     margin: 0 auto;
 }
+
+.flex {
+	display: -webkit-flex;
+	display: flex;
+}
+
+.flex-row {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.flex-item {
+    -webkit-flex: auto;
+	flex: auto;
+}
