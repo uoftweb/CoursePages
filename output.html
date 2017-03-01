@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./static/css/normalize.css">
+  <link rel="stylesheet" href="./static/css/tachyons.css">
+  <link rel="stylesheet" href="./static/css/course-pages.css">
+  <title>Course Pages</title>
+</head>
+<body>
+  <!-- The sidebar takes 1/4 of the width -->
+  <nav class="sticky w-25 th top-0 left-0 vh-100 overflow-y-scroll fl bg-ghost-white">
+  <header class="ph3">
+    <h1 class="f1 fw5 black">CSC488</h1>
+    <h2 class="f2 fw5 gray">Compilers and Interpreters</h2>
+    <h3 class="f3 fw5 gray-80">Winter 2016</h3>
+  </header>
+  <div class="w-100">
+    <div class="tc">
+      <input class="tc f5 pv1 ph2"
+             type="text"
+             name="sidebar-input"
+             id="sidebar-input"
+             placeholder="filter"
+             value="" />
+    </div>
+    <ul class="list f5" id="sidebar-search">
+        <li class="pv2"><a class="blue link" href="#!">Announcements</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Calendar</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Syllabus</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Lectures</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Instructors and TAs</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Office Hours</a></li>
+        <li id="sb-sublist" class="pv2">
+          <a class="blue link" href="#!">Assignments</a>
+          <ul>
+          <li class="pv2"><a class="blue link" href="#!">Assignment 1</a></li>
+          <li class="pv2"><a class="blue link" href="#!">Assignment 2</a></li>
+          <li class="pv2"><a class="blue link" href="#!">Assignment 3</a></li>
+          <li class="pv2"><a class="blue link" href="#!">Assignment 4</a></li>
+          </ul>
+        </li>
+        <li class="pv2">
+          <a class="blue link" href="#!">Tests and Exams</a>
+          <ul>
+          <li class="pv2"><a class="blue link" href="#!">Midterm 1</a></li>
+          <li class="pv2"><a class="blue link" href="#!">Midterm 2</a></li>
+          <li class="pv2"><a class="blue link" href="#!">Final Exam</a></li>
+          </ul>
+        </li>
+        <li class="pv2"><a class="blue link" href="#!">Grades</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Resources</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Feedback</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Piazza</a></li>
+        <li class="pv2"><a class="blue link" href="#!">Markus</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <section class="w-75 fl vh-100 ov-y-scroll">
+    <!--
+      Include things here
+    -->
+    <h2 class="f2 fw7 pl3">Course Description</h2>
+<p class="f5 measure-wide ml3">
+Welcome to the course webpage for the
+Fall 2016 term of CSC108H, an Introduction to Computer Programming, on the St.
+George campus. This course teaches the basics of programming in Python, which
+is an industrial-strength programming language used at companies like Google
+and Industrial Light and Magic.
+</p>
+
+<!-- TODO:
+Padding on the left/ Margins
+Wide Measure -->
+    <!--Dropdown-->
+<div class="Show Specific Week">
+<button id="calendar" class="dropbtn">Select a Week</button>
+  <div id="WeekFilter" class="dropdown-content">
+    <a href="#menu-week1" onclick="ToggleVisibility('Week1')">Week 1</a>
+    <a href="#menu-week2" onclick="ToggleVisibility('Week2')">Week 2</a>
+    <a href="#menu-week3" onclick="ToggleVisibility('Week3')">Week 3</a>
+    <a href="#menu-week4" onclick="ToggleVisibility('Week4')">Week 4</a>
+    <a href="#menu-week5" onclick="ToggleVisibility('Week5')">Week 5</a>
+    <a href="#menu-week6" onclick="ToggleVisibility('Week6')">Week 6</a>
+    <a href="#menu-week7" onclick="ToggleVisibility('Week7')">Week 7</a>
+    <a href="#menu-week8" onclick="ToggleVisibility('Week8')">Week 8</a>
+    <a href="#menu-week9" onclick="ToggleVisibility('Week9')">Week 9</a>
+    <a href="#menu-week10" onclick="ToggleVisibility('Week10')">Week 10</a>
+    <a href="#menu-week11" onclick="ToggleVisibility('Week11')">Week 11</a>
+    <a href="#menu-week12" onclick="ToggleVisibility('Week12')">Week 12</a>
+  </div>
+</div>
+
+<!-- Weeks -->
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week1">
+  <h2>Week 1</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em;display: none;" id="Week2">
+  <h2>Week 2</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week3">
+  <h2>Week 3</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week4">
+  <h2>Week 4</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week5">
+  <h2>Week 5</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week6">
+  <h2>Week 6</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week7">
+  <h2>Week 7</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week8">
+  <h2>Week 8</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week9">
+  <h2>Week 9</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week10">
+  <h2>Week 10</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week11">
+  <h2>Week 11</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<div style="padding-left: 3em; padding-top: 2em; padding-bottom: 2em; display: none;" id="Week12">
+  <h2>Week 12</h2>
+  <div style="padding-left: 4em;">
+    <h3>Date<h3>
+    <h3>Topic<h3>
+    <h3>Readings<h3>
+      <ul>
+        <li>Readings 1</li>
+        <li>Readings 2</li>
+        <li>Readings 3</li>
+      </ul>
+    <h3>Notes<h3>
+      <ul>
+        <li><a href="https://www.link1.com/">Notes Link 1</a></li>
+        <li><a href="https://www.link2.com/">Notes Link 2</a></li>
+        <li><a href="https://www.link3.com/">Notes Link 3</a></li>
+      </ul>
+    </div>
+</div>
+<!--      Line for each of the week shower and hiders
+  <button onclick="displayResult()">Change text</button>
+  -->
+<table class="w-100">
+  <thead>
+    <tr>
+      <th class="w-20">Date</th><!-- or Week -->
+      <th class="w-20">Type</th>
+      <th class="w-20">Topic</th>
+      <th class="w-20">Assigned</th>
+      <th class="w-20">Due</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a</td>
+      <td>a</td>
+      <td>a</td>
+      <td>a</td>
+      <td>a</td>
+      <div class="hidden"></div>
+    </tr>
+  </tbody>
+</table>
+  </section>
+
+  <script src="./static/js/filter.js"></script>
+  <script src="./static/js/calendar.js"></script>
+</body>
+</html>
