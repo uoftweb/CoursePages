@@ -12,9 +12,9 @@ not need more than issuing a few commands.
 
 - [ ] `init`: initializes the basic config file by asking some questions
 - [ ] `feature [feature-name]`: adds `feature-name` to the page
-  - [ ] calendar: [{date: {topic, links, description}}] 
-  - [ ] homework: {name, due date, team size (optional), weight (optional), topics (optional), at least one of [description, link]}  
-  - [ ] exam: date, time, topics (optional), [links] to past exams (optional), location: [{building, room, lastname}]
+  - [ ] calendar: `[{date: {topic, links, description}}]` 
+  - [ ] homework: `{name, due date, team size (optional), weight (optional), topics (optional), at least one of [description, link]}`  
+  - [ ] exam: `date, time, topics (optional), [links] to past exams (optional), location: [{building, room, lastname}]`
 - [ ] `build (location)`: build to project, in `location` if specified.
 
 
