@@ -32,7 +32,7 @@ def handler(event_type, src_path):
     # only re-build when a file is deleted, modified, or moved
     if event_type != 'created':
         print('detected a change in ' + src_path)
-        build('course-pages', 'templates', 'index.html', '.', 'output.html')
+        build('templates', 'templates', 'index.html', '.', 'output.html')
 
 
 if __name__ == '__main__':
