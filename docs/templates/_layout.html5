@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CoursePages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$">
+    $endfor$
+    $if(quotes)$
+    <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+    $endif$
+    $for(css)$
+    <link rel="stylesheet" href="$css$">
+    $endfor$
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+  </head>
+  <body>
+    <header class="dn-ns bb bw1 bg-washed-blue black-80 tc pv4">
+      <h1 class="mt2 mb0 f1 fw5 black">Course Pages</h1>
+      <h2 class="mt2 mb0 f6 fw4 tracked">A framework for online course pages</h2>
+      <nav class="bt bb tc mw7 center mt4 bg-white">
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib
+        pa3 ph4-l" href="/index.html">Home</a>
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-green dib
+        pa3 ph4-l" href="/components.html">Typography</a>
+        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3
+        ph4-l" href="#">Components</a>
+      </nav>
+    </header>
+    <nav class="fixed w-25 dn db-ns top-0-ns left-0-ns vh-100 overflow-y-scroll fl bg-washed-blue">
+      <header class="ph3">
+        <h1 class="f1 fw5 black">Course Pages</h1>
+        <h2 class="f2 fw5 gray">A framework for online course pages</h2>
+      </header>
+      <ul class="list f5" id="sidebar-search">
+        <li class="pv2"><a class="blue link" href="./index.html">Home</a></li>
+        <li class="pv2"><a class="blue link" href="./typography.html">Typography</a></li>
+        <li class="pv2"><a class="blue link"
+                           href="./components.html">Components</a></li>
+        $if(toc)$
+        <li class="pv2"><a class="blue link" href="$idprefix$">$toc$</a></li>
+        $endif$
+      </ul>
+    </nav>
+
+      <div class="w-75-ns fr ph3 vh-100 ov-y-scroll bg-white">
+        $body$
+        $for(include-after)$
+        $include-after$
+        $endfor$
+      </div>
+  </body>
+</html>
