@@ -6,8 +6,8 @@ import sys
 def build(project_name, template_directory, main_template,
           output_path, output_name):
     """
-    Renders the templates in `project_name`/`template_directory` and
-    writes it to the file located at `output_path`/`output_name`
+    Renders the templates in `project_name/template_directory` and
+    writes it to the file located at `output_path/output_name`
     """
     env = Environment(loader=PackageLoader(project_name, template_directory))
     template = env.get_template(main_template)
@@ -29,10 +29,10 @@ def handler(event_type, src_path):
     if os.path.basename(src_path)[0] == '.':
         return
 
-    # only re-build when a file is deleted, or modified, or moved
+    # only re-build when a file is deleted, modified, or moved
     if event_type != 'created':
         print('detected a change in ' + src_path)
-        build('course-pages', 'templates', 'index.html', '.', 'output.html')
+        build('templates', 'templates', 'index.html', '.', 'output.html')
 
 
 if __name__ == '__main__':
@@ -44,7 +44,7 @@ if __name__ == '__main__':
             import easywatch
             print("Watching course-pages/templates for changes")
             print("Ctrl-c to quit")
-            easywatch.watch('./course-pages/templates', handler)
+            easywatch.watch('./templates/templates', handler)
         else:
-            build('course-pages', 'templates', 'index.html', '.',
+            build('templates', 'templates', 'index.html', '.',
                   'output.html')

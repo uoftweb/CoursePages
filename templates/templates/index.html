@@ -9,20 +9,27 @@
   <link rel="stylesheet" href="./static/css/tachyons.css">
   <link rel="stylesheet" href="./static/css/course-pages.css">
   <title>Course Pages</title>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- The sidebar takes 1/4 of the width -->
   {% include 'sidebar.html' %}
 
-  <section class="w-75 fl vh-100 ov-y-scroll">
+  <section class="w-75-ns w-100 pl2 fr-ns ph3-ns mvh-100 ov-y-scroll bg-white pb5">
     <!--
       Include things here
     -->
-    {% include 'coursedescription.html'%}
-    {% include 'calendar.html'%}
+    {% include 'coursedescription.html' %}
+    {% include 'calendar.html' %}
+    {% include 'assignments.html' %}
+    {% include 'staff.html' %}
   </section>
 
   <script src="./static/js/filter.js"></script>
+  <script src="./static/js/week-filter.js"></script>
   <!-- <script src="/static/js/current-week.js"></script> -->
 </body>
 </html>
