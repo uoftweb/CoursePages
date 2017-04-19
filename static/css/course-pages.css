@@ -1,3 +1,4 @@
+/* >>>> OLD CSS */
 .bg-golden-brown { background-color: 	 rgba(194, 193, 49, 0.7)}
 
 @media (--breakpoint-not-small) {
@@ -25,4 +26,100 @@
 .flex-item {
     -webkit-flex: auto;
 	flex: auto;
+}
+
+/* >>>> END OLD CSS */
+
+body, html { font-size: 16px; }
+
+
+
+/* 
+ * TYPOGRAPHY
+ * See docs/text.md
+ */
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+
+/* docs/text.md#paragraph */
+p {
+  max-width: 34em;
+  line-height: 1.5;
+}
+
+/* docs/text.md#links */
+.link {
+  color: #357edd;
+  text-decoration: none; 
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
+}
+.link:link, .link:visited {
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
+}
+.link:hover {
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
+}
+.link:active {
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
+}
+.link:focus {
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
+  outline: 1px dotted currentColor;
+}
+
+.sidebar {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  background-color: #f6fffe;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+/* on a small screen, we _dont_ want to filter */
+.sidebar__filter {
+  display: none;
+}
+
+/* on a small screen, we want to display the list horizontally, as opposed to
+ * vertically for larger screens
+ */
+.sidebar__items { }
+
+/* temporary, as a guide when naming stuff */ 
+.sidebar__headers { }
+
+
+
+
+
+/* When NOT on a small screen (tablets, laptops) */
+@media screen and (min-width 30rem) {
+  /*
+   * SIDEBAR
+   */
+  .sidebar {
+    /* position */
+    top: 0;
+    left: 0;
+    float: left;
+    /* size */
+    height: 100vh;
+    width: 25%;
+    /* scroll if we go over 100vh */
+    overflow-y: scroll;
+    /* color */
+    background-color: #f6fffe;
+  }
+  .sidebar__search {
+    display: block;
+  }
 }
