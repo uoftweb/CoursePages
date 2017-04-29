@@ -9,13 +9,14 @@
     <a class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" href="#">Exam</a>
   </nav>
 </header>
-<nav class="fixed w-25 dn db-ns top-0-ns left-0-ns vh-100 overflow-y-scroll fl bg-washed-blue">
-  <header class="ph3">
+<div class="sidebar">
+  <header class="sidebar__header">
     <h1 class="f1 fw5 black">CSC108</h1>
     <h2 class="f2 fw5 gray">Introduction to Computer Programming</h2>
     <h3 class="f3 fw5 gray-80">Winter 2017</h3>
   </header>
-  <div class="tc">
+  <nav>
+  <div class="tc sidebar__filter">
     <input class="tc f5 pv1 ph2"
            type="text"
            name="sidebar-input"
@@ -24,7 +25,7 @@
            value="" />
   </div>
 
-  <ul class="list f5" id="sidebar-search">
+  <ul class="list f5 sidebar__list" id="sidebar-search">
     <li class="pv2">
       <a class="blue link" href="./index.html">Home</a>
       <ul>
@@ -38,4 +39,6 @@
     <li class="pv2"><a class="blue link" href="./index.html">Lectures</a></li>
     <li class="pv2"><a class="blue link" href="./index.html">Test/Exam</a></li>
   </ul>
-</nav>
+  </nav>
+
+</div>

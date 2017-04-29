@@ -1,9 +1,6 @@
 /* >>>> OLD CSS */
 .bg-golden-brown { background-color: 	 rgba(194, 193, 49, 0.7)}
 
-@media (--breakpoint-not-small) {
-  dn-ns { display: none; }
-}
 .tj {
     text-align: justify;
 }
@@ -29,8 +26,14 @@
 }
 
 /* >>>> END OLD CSS */
+:root {
+  --main-color: white;
+  --sidebar-bg-color: #f6fffe;
+  --text-color: #333;
+  --sidebar-text-color: #333;
+}
 
-body, html { font-size: 16px; }
+/* body, html { font-size: 16px; } */
 
 
 
@@ -76,14 +79,7 @@ p {
 }
 
 .sidebar {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  background-color: #f6fffe;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  width: 100%;
 }
-
 /* on a small screen, we _dont_ want to filter */
 .sidebar__filter {
   display: none;
@@ -101,25 +97,21 @@ p {
 
 
 
-/* When NOT on a small screen (tablets, laptops) */
-@media screen and (min-width 30rem) {
+/* Large Screens (desktops, laptops) */
+@media screen and (min-width: 53rem) {
   /*
    * SIDEBAR
    */
   .sidebar {
-    /* position */
-    top: 0;
-    left: 0;
-    float: left;
-    /* size */
-    height: 100vh;
-    width: 25%;
-    /* scroll if we go over 100vh */
-    overflow-y: scroll;
-    /* color */
-    background-color: #f6fffe;
+  position: fixed;
+  width: 25%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  float: left;
+  background-color: var(--sidebar-bg-color);
   }
   .sidebar__search {
-    display: block;
   }
 }
