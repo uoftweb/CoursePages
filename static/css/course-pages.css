@@ -53,6 +53,12 @@ p {
   line-height: 1.5;
 }
 
+/* docs/links.md#links */
+a {
+  text-decoration: none;
+  color: #357edd;
+}
+
 /* docs/text.md#links */
 .link {
   color: #357edd;
@@ -79,20 +85,66 @@ p {
 }
 
 .sidebar {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid black;
+  background-color: var(--sidebar-bg-color);
 }
+
+.sidebar__header--courseCode {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.sidebar__header--courseName {
+  font-weight: 400;
+  font-size: 1rem;
+  color: gray;
+  letter-spacing: 0.1em;
+}
+
 /* on a small screen, we _dont_ want to filter */
 .sidebar__filter {
   display: none;
 }
 
+
+
 /* on a small screen, we want to display the list horizontally, as opposed to
  * vertically for larger screens
  */
-.sidebar__items { }
+.sidebar__list {
+  background-color: white;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.sidebar__list--link {
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+/* .sidebar__list--sublist .has-dropdown:hover { background-color: white; } */
+
+
+.sidebar__list--sublist { display: inline-block;
+  color: #357edd;
+}
+
+.has-dropdown--hide { display: none; }
+.has-dropdown:after {
+  content: " ✓";
+}
+.has-dropdown { background-color:white; cursor: default; }
+.has-dropdown:hover { background-color: white; }
+
+/* sublists get toggled using JS */
+/* .sidebar__list--sublist { display: none; } */
 
 /* temporary, as a guide when naming stuff */ 
 .sidebar__headers { }
-
 
 
 
@@ -103,15 +155,34 @@ p {
    * SIDEBAR
    */
   .sidebar {
-  position: fixed;
-  width: 25%;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow-y: scroll;
-  float: left;
-  background-color: var(--sidebar-bg-color);
+    position: fixed;
+    width: 25%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    float: left;
+    /* removing small settings */
+    border: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
-  .sidebar__search {
+  .sidebar__list {
+    text-align: left;
+    background-color: var(--sidebar-bg-color);
+    border: none;
   }
+
+  .sidebar__list--link {
+    display: block;
+  }
+  .has-dropdown__name{ display: none; }
+  .has-dropdown--hide { display: block; }
+  .has-dropdown:after { content: ""; }
+  .sidebar__filter { display: block; }
+
+/* sidebar header 
+ * h1: f1 fw5 black
+ * h2: f2 fw5 gray
+ * */
 }
