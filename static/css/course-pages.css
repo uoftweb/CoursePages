@@ -27,7 +27,7 @@
 
 /* >>>> END OLD CSS */
 :root {
-  --main-color: white;
+  --main-bg-color: white;
   --sidebar-bg-color: #f6fffe;
   --text-color: #333;
   --sidebar-text-color: #333;
@@ -109,44 +109,37 @@ a {
   display: none;
 }
 
-
-
-/* on a small screen, we want to display the list horizontally, as opposed to
- * vertically for larger screens
- */
 .sidebar__list {
-  background-color: white;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  list-style-type: none;
+  margin:0;
+  padding: 0;
 }
 
-.sidebar__list--link {
+.sidebar__list--item,
+.sidebar__list--itemwrapper {
+  padding: 0; 
+  margin: 0;
   display: inline-block;
-  font-size: 0.875rem;
+}
+
+.sidebar__list--item:hover {
+  background-color: white;
+}
+.sidebar__list--item {
   padding: 1rem;
+  margin: 0;
 }
 
-/* .sidebar__list--sublist .has-dropdown:hover { background-color: white; } */
-
-
-.sidebar__list--sublist { display: inline-block;
-  color: #357edd;
+.sidebar__list--sublist {
+  list-style-type: none;
 }
 
-.has-dropdown--hide { display: none; }
-.has-dropdown:after {
-  content: " ✓";
+.sidebar__list--sublist__wrapper {
+  padding: 0;
+  margin: 0;
 }
-.has-dropdown { background-color:white; cursor: default; }
-.has-dropdown:hover { background-color: white; }
 
-/* sublists get toggled using JS */
-/* .sidebar__list--sublist { display: none; } */
-
-/* temporary, as a guide when naming stuff */ 
-.sidebar__headers { }
-
-
+.sidebar__list--sublist__label { display: none; }
 
 
 /* Large Screens (desktops, laptops) */
@@ -166,20 +159,64 @@ a {
     border: none;
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-  .sidebar__list {
     text-align: left;
-    background-color: var(--sidebar-bg-color);
-    border: none;
   }
-
-  .sidebar__list--link {
+  .sidebar__filter {
     display: block;
   }
-  .has-dropdown__name{ display: none; }
-  .has-dropdown--hide { display: block; }
-  .has-dropdown:after { content: ""; }
-  .sidebar__filter { display: block; }
+
+  .sidebar__list,
+  .sidebar__list--sublist {
+    list-style: initial;
+    list-style-type:none; 
+    /* margin:0; */
+    padding: 0.5rem;
+  }
+
+  .sidebar__list--item,
+  .sidebar__list--itemwrapper {
+    /* margin: 0; */
+    display: list-item;
+    padding: 0.875rem;
+    padding-right: 0;
+    /* padding-left: 1rem; */
+  }
+
+  .sidebar__list--itemwrapper {
+    padding-bottom: 0;
+  }
+
+  .sidebar__list--link:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+  .sidebar__list--item {
+    /* padding: 1rem; */
+  }
+
+.sidebar__list--item {
+  margin: 0;
+}
+
+.sidebar__list--sublist {
+  list-style-type: none;
+}
+
+.sidebar__list--sublist__wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar__list--sublist__label {
+  display: inline-block;
+  width: 100%;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.sidebar__list--sublist__label:hover {
+  background-color: white;
+}
 
 /* sidebar header 
  * h1: f1 fw5 black

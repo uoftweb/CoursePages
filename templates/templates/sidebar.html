@@ -4,31 +4,36 @@
     <h2 class="sidebar__header--courseName">Introduction to Computer Programming</h2>
     <h3 class="f3 fw5 gray-80">Winter 2017</h3>
   </header>
-  <nav>
-    <div class="tc sidebar__filter">
-      <input class="tc f5 pv1 ph2"
+  <nav class="">
+    <div class="sidebar__filter">
+      <input class="sidebar__filter--input"
              type="text"
              name="sidebar-input"
              id="sidebar-input"
              placeholder="filter"
              value="" />
     </div>
-
-    <div class="sidebar__list" id="sidebar-search">
-      <div class="sidebar__list--sublist">
-        <div class="has-dropdown " href="./index.html">
-          <span class="has-dropdown__name">Home</span>
-          <a class="sidebar__list--link has-dropdown--hide"
-             href="./index.html#oncampus">Home</a>
-          <a class="sidebar__list--link has-dropdown--hide" href="./index.html#oncampus">Online vs On-Campus</a>
-          <a href="./index.html#textbook" class="has-dropdown--hide sidebar__list--link">Textbook</a>
-        </div>
-      </div>
-      <a class="sidebar__list--link" href="./syllabus.html">Syllabus</a>
-      <a class="sidebar__list--link" href="./assignments.html">Assignments</a>
-      <a class="sidebar__list--link" href="./index.html">PCRS</a>
-      <a class="sidebar__list--link" href="./index.html">Lectures</a>
-      <a class="sidebar__list--link" href="./index.html">Test/Exam</a>
-    </div>
+    <ul class="sidebar__list" id="sidebar-search">
+      <li class="sidebar__list--itemwrapper">
+        <a class="sidebar__list--sublist__label" href="#">Home</a>
+        <ul class="sidebar__list--sublist">
+          <li class="sidebar__list--item">
+            <a class="sidebar__list--link" href="#">Online vs On-campus</a>
+          </li>
+          <li class="sidebar__list--item">
+            <a class="sidebar__list--link" href="#">Textbook</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sidebar__list--item">
+        <a class="sidebar__list--link" href="#">Assignemtns</a>
+      </li>
+      <li class="sidebar__list--item">
+        <a class="sidebar__list--link" href="#">Syllabus</a>
+      </li>
+      <li class="sidebar__list--item">
+        <a class="sidebar__list--link" href="#">Lectures</a>
+      </li>
+    </ul>
   </nav>
 </div>
