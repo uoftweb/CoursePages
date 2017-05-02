@@ -103,6 +103,13 @@ a {
   color: gray;
   letter-spacing: 0.1em;
 }
+/* f3 fw5 gray-80 */
+
+.sidebar__header--courseTerm {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, .8);
+}
 
 /* on a small screen, we _dont_ want to filter */
 .sidebar__filter {
@@ -132,6 +139,7 @@ a {
 
 .sidebar__list--sublist {
   list-style-type: none;
+  padding: 0;
 }
 
 .sidebar__list--sublist__wrapper {
