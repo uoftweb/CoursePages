@@ -219,7 +219,28 @@ a {
   color: #19a974;
 }
 
+.assignment__link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+  padding: 1rem;
+  border: 1px solid black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
+.assignment__link:hover {
+  border-color: #357edd;
+  opacity: .8;
+}
+
+.assignment__link--arrow {
+  width: 1rem;
+}
 
 /* Large Screens (desktops, laptops) */
 @media screen and (min-width: 53rem) {
