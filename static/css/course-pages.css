@@ -150,6 +150,13 @@ a {
 .sidebar__list--sublist__label { display: none; }
 
 .weeks { }
+.weeks__filter {}
+.weeks__filter--label {}
+.weeks__filter--input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .week {
   display: inline-block;
   color: #357edd;
