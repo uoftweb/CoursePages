@@ -195,6 +195,32 @@ a {
  /* -webkit-transition: opacity .15s ease-out; */
  /* transition: opacity .15s ease-out; */
 }
+
+.assignment__object {
+  display: inline-block;
+  margin-right: 4rem;
+}
+.assignment__object--name {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-left: 0;
+  color: #777;
+}
+.assignment__object--value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+.assignment__object--value .warning {
+  color: #ff4136;
+}
+.assignment__object--value .noWarning {
+  color: #19a974;
+}
+
+
+
 /* Large Screens (desktops, laptops) */
 @media screen and (min-width: 53rem) {
   /*
