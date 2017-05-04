@@ -28,7 +28,7 @@
 /* >>>> END OLD CSS */
 :root {
   --main-bg-color: white;
-  --sidebar-bg-color: #f6fffe;
+  --sidebar-bg-color: #d3d3d3;
   --text-color: #333;
   --sidebar-text-color: #333;
 }
@@ -159,7 +159,7 @@ a {
 }
 .week {
   display: inline-block;
-  color: #357edd;
+  color: #d5d5d5;
   font-size: 1.25rem;
   text-decoration: none;
   text-align: center;
@@ -183,14 +183,14 @@ a {
   background-color: var(--sidebar-bg-color);
 }
 .week:focus {
-  border-color: #357edd;
+  border-color: #cdd2d8;
   opacity: .5;
   /* -webkit-transition: opacity .15s ease-in; */
   /* transition: opacity .15s ease-in; */ 
-  background-color: #f6fffe;
+  background-color: var(--sidebar-bg-color);
 }
 .week:active {
-  border-color: #357edd;
+  border-color: #cdd2d8;
  opacity: .8;
  /* -webkit-transition: opacity .15s ease-out; */
  /* transition: opacity .15s ease-out; */
@@ -234,7 +234,7 @@ a {
 }
 
 .assignment__link:hover {
-  border-color: #357edd;
+  border-color: #cdd2d8;
   opacity: .8;
 }
 
