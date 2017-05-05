@@ -28,7 +28,7 @@
 /* >>>> END OLD CSS */
 :root {
   --main-bg-color: white;
-  --sidebar-bg-color: #d3d3d3;
+  --sidebar-bg-color: rgba(194, 193, 49, 0.7);
   --text-color: #333;
   --sidebar-text-color: #333;
 }
@@ -84,6 +84,14 @@ a {
   outline: 1px dotted currentColor;
 }
 
+.main {
+  width: 100%;
+  padding-left: 0.5rem;
+  overflow-y: scroll;
+  background-color: var(--main-bg-color);
+  padding-bottom: 4rem;
+}
+
 .sidebar {
   text-align: center;
   padding-top: 2rem;
@@ -130,7 +138,7 @@ a {
 }
 
 .sidebar__list--item:hover {
-  background-color: white;
+  background-color: var(--main-bg-color);
 }
 .sidebar__list--item {
   padding: 1rem;
@@ -159,7 +167,7 @@ a {
 }
 .week {
   display: inline-block;
-  color: #d5d5d5;
+  color: var(sidebar-text-color);
   font-size: 1.25rem;
   text-decoration: none;
   text-align: center;
@@ -222,7 +230,7 @@ a {
 .assignment__link {
   font-size: 1rem;
   text-decoration: none;
-  color: #333;
+  color: var(--main-text-color);
   padding: 1rem;
   border: 1px solid black;
   display: -webkit-inline-box;
@@ -234,7 +242,7 @@ a {
 }
 
 .assignment__link:hover {
-  border-color: #cdd2d8;
+  background-color: var(--sidebar-bg-color);
   opacity: .8;
 }
 
@@ -249,7 +257,7 @@ a {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: var(--main-bg-color);
 }
 .profile__name {
   font-size: 1.25rem;
@@ -277,6 +285,14 @@ a {
 
 /* Large Screens (desktops, laptops) */
 @media screen and (min-width: 53rem) {
+  /* 
+   * MAIN
+   */
+.main {
+  width: 75%;
+  float: right;
+  display: inline;
+}
   /*
    * SIDEBAR
    */
@@ -320,7 +336,7 @@ a {
 }
 
 .sidebar__list--link:hover {
-  background-color: white;
+  background-color: var(--main-bg-color);
   cursor: pointer;
 }
 .sidebar__list--item {
@@ -348,7 +364,7 @@ a {
 }
 
 .sidebar__list--sublist__label:hover {
-  background-color: white;
+  background-color: var(--main-bg-color);
 }
 .week { width: 16rem; }
 
