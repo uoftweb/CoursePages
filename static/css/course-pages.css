@@ -4,6 +4,7 @@
 .tj {
   text-align: justify;
 }
+div { box-sizing: border-box; }
 
 .img-with-text img {
   display: block;
@@ -28,9 +29,9 @@
 /* >>>> END OLD CSS */
 :root {
   --main-bg-color: white;
-  --sidebar-bg-color: white;
+  --sidebar-bg-color: #312c32;
   --text-color: #333;
-  --sidebar-text-color: #333;
+  --sidebar-text-color: #feffff;
 }
 
 /* 
@@ -59,7 +60,7 @@ a {
 .text {
   font-size: 1rem;
   max-width: 40rem;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   line-height: 1.5;
 }
 /* docs/text.md#links */
@@ -93,6 +94,11 @@ a {
   overflow-y: scroll;
   background: var(--main-bg-color);
   padding-bottom: 4rem;
+  padding-left: 1rem;
+}
+.main__title {
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 
 .sidebar {
@@ -175,7 +181,6 @@ a {
   font-size: 1.25rem;
   text-decoration: none;
   text-align: center;
-  margin-left: 0.5rem;
   margin-right: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -210,21 +215,43 @@ a {
  /* transition: opacity .15s ease-out; */
 }
 
+.assignment {
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  /* text-align: center; */
+  padding-left: 1rem;
+}
+
+.assignment:hover {
+  /* background-color: var(--sidebar-bg-color); */
+  /* color: var(--sidebar-text-color); */
+  opacity: 0.7;
+}
+.assignment__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 .assignment__object {
   display: inline-block;
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 .assignment__object--name {
   font-size: 0.875rem;
   font-weight: bold;
   margin-left: 0;
-  color: #777;
+  /* color: #777; */
 }
 .assignment__object--value {
   font-size: 1.5rem;
   font-weight: bold;
   margin-left: 0;
-  color: rgba(0, 0, 0, 0.8);
+  /* color: rgba(0, 0, 0, 0.8); */
 }
 .assignment__object--value .warning {
   color: #ff4136;
@@ -317,7 +344,16 @@ a {
     border: none;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 0;
     text-align: left;
+  }
+  .sidebar__header--courseCode { font-size: 3rem; }
+  .sidebar__header--courseName { 
+    letter-spacing: normal;
+    font-size: 1.5rem;
+  }
+  .sidebar__header--courseTerm { 
+    font-size: 1.25rem;
   }
   .sidebar__filter {
     display: block;

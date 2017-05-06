@@ -5,7 +5,7 @@
  * > const f = compose(f1, f2, f3, f4)
  * > const result = f(1)
  * > result === f1(f2(f3(f4(x))))
- * True
+ * true
  * ```
  */
 const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)));
@@ -14,29 +14,46 @@ const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)));
  * Initialize a list of the list elements under the id
  * 'sidebar-search'
  *
- * () => {text: string , li: LI}[]
+ * () => a tree of {text, node, children}, rooted with a fake node that has property
+ * `isRoot`
  */
 const initSideBarList = () => {
-  // get the sidebar
-  const ul = document.getElementById("sidebar-search");
-
-  const nodes = [];
-
-  // get all the list elements in the sidebar
-  const len = ul.childNodes.length;
-  for (let i = 0; i < len; i++) {
-    if (ul.childNodes[i].nodeName === "LI") {
-      nodes.push(ul.childNodes[i]);
+  const root = { text: "", node: null, isRoot: true, children: [] };
+  const makeTree = (parentNode, html, nodeIdentFn) => {
+    if (!(html.children.length > 0)) {
+      if (nodeIdentFn(html)) {
+        parentNode.children.push({
+          text: html.text,
+          node: html,
+          isRoot: false
+        });
+      }
+      return parentNode;
     }
-  }
+    if (parentNode.text === "") {
+      parentNode.text = html.children[0].text || "";
+    }
+    if (html.children.length === 0) {
+      return parentNode;
+    }
+    // // this node has children, recursively `makeTree`
+    // let thisParent = { text: "", node: idk, isRoot: false }
+    for (let i = 0; i < html.children.length; i++) {
+      makeTree(parentNode, html.children[i], nodeIdentFn);
+    }
+    return parentNode;
+  };
 
-  // capture the text from each element so that we can reference
-  // it with `.text`
-  const liElements = nodes.map(x => {
-    return { text: x.innerText, li: x };
-  });
+  const nodeIdentifier = node => {
+    return node.className.split(" ").indexOf("sidebar__list--link") > -1;
+  };
 
-  return liElements;
+  const tree = makeTree(
+    root,
+    document.getElementById("sidebar-search"),
+    nodeIdentifier
+  );
+  return root;
 };
 
 /*
