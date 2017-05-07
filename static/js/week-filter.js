@@ -5,12 +5,12 @@ const originalList = Array.from(document.getElementById("week-links").children)
     return { week: Number(node.id.split("-")[1]), node: node };
   });
 let request = document.getElementById("week_filter");
-let generateWeeks = compose(
-  displayWeeks,
-  uniqueWeeks,
-  lst => lst.map(getRanges),
+let generateWeeks = apply(
+  cleanText,
   allWeeks,
-  cleanText
+  lst => lst.map(getRanges),
+  uniqueWeeks,
+  displayWeeks
 );
 request.oninput = () => generateWeeks(request.value);
 
