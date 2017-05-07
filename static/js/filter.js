@@ -1,59 +1,45 @@
 /*
- * Composes functions together, like so
+ * applys the functions in order, chaining their results
  *
  * ```
- * > const f = compose(f1, f2, f3, f4)
+ * > const f = apply(f1, f2, f3, f4)
  * > const result = f(1)
- * > result === f1(f2(f3(f4(x))))
- * true
+ * > result === f4(f3(f2(f1(x)))) 
+ * True
  * ```
  */
-const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)));
+const apply = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args)));
+
+function isSidebarItem(node) {
+  return node.className.split(" ").indexOf("sidebar__list--item") > -1;
+}
+
+function sidebar(sidebarList) {
+  const children = sidebarList.children;
+  const nodes = [];
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    if (isSidebarItem(child))
+      nodes.push({ html: child, text: [child.textContent.trim()] });
+    else {
+      const text = child.textContent
+        .split("\n")
+        .map(t => t.trim())
+        .filter(text => text);
+      nodes.push({ html: child, text: text });
+    }
+  }
+  return nodes;
+}
 
 /*
  * Initialize a list of the list elements under the id
  * 'sidebar-search'
  *
- * () => a tree of {text, node, children}, rooted with a fake node that has property
- * `isRoot`
+ * () => {text: string , html: LI}[]
  */
 const initSideBarList = () => {
-  const root = { text: "", node: null, isRoot: true, children: [] };
-  const makeTree = (parentNode, html, nodeIdentFn) => {
-    if (!(html.children.length > 0)) {
-      if (nodeIdentFn(html)) {
-        parentNode.children.push({
-          text: html.text,
-          node: html,
-          isRoot: false
-        });
-      }
-      return parentNode;
-    }
-    if (parentNode.text === "") {
-      parentNode.text = html.children[0].text || "";
-    }
-    if (html.children.length === 0) {
-      return parentNode;
-    }
-    // // this node has children, recursively `makeTree`
-    // let thisParent = { text: "", node: idk, isRoot: false }
-    for (let i = 0; i < html.children.length; i++) {
-      makeTree(parentNode, html.children[i], nodeIdentFn);
-    }
-    return parentNode;
-  };
-
-  const nodeIdentifier = node => {
-    return node.className.split(" ").indexOf("sidebar__list--link") > -1;
-  };
-
-  const tree = makeTree(
-    root,
-    document.getElementById("sidebar-search"),
-    nodeIdentifier
-  );
-  return root;
+  return sidebar(document.getElementById("sidebar-search"));
 };
 
 /*
@@ -62,38 +48,33 @@ const initSideBarList = () => {
  *
  * ({text: string, li: LI}[], string) => LI[]
  */
-const filterSideBarList = (originalList, text) => {
+const filterSideBarList = (originalList, searchText) => {
   // don't filter on inputs less than three characters, since
   // we return too much that the user might not be looking for
-  if (text.length < 2) {
-    return originalList.map(li => li.li);
+  if (searchText.length < 2) {
+    originalList.forEach(node => $(node.html).show());
+    return;
   }
+
+  const hasSearchWord = listOfText =>
+    listOfText.filter(
+      text => text.toLowerCase().search(searchText.toLowerCase()) >= 0
+    ).length > 0;
 
   // filter out the elements from `originalList` that match `text`, and
   // then grab the li tags from each element
-  const newli = originalList
-    .filter(li => li.text.toLowerCase().search(text.toLowerCase()) >= 0)
-    .map(li => li.li);
+  const newli = originalList.filter(node => hasSearchWord(node.text));
 
   // if nothing matches, return the original list
   if (newli.length === 0) {
-    return originalList.map(li => li.li);
+    originalList.forEach(node => $(node.html).show());
+    return;
   }
-  return newli;
-};
 
-/*
- * Replace the list in `sidebar-search` with
- * the contents of `newLi`
- *
- * LI[] => none
- */
-const replaceSideBarList = newLi => {
-  let ul = document.getElementById("sidebar-search");
-  ul.innerHTML = "";
-  for (let i = 0; i < newLi.length; i++) {
-    ul.appendChild(newLi[i]);
-  }
+  originalList.forEach(node => {
+    if (hasSearchWord(node.text)) $(node.html).show();
+    else $(node.html).hide();
+  });
 };
 
 window.onload = () => {
@@ -102,14 +83,8 @@ window.onload = () => {
 
   // gets text field data when called
   const getInput = () => document.getElementById("sidebar-input").value;
-
-  // this is where the user inputs text
-  const sideBarInput = document.getElementById("sidebar-input");
-
-  // calls filterSideBarList and passes its return to replaceSideBarList
-  const generateSideBar = compose(replaceSideBarList, () =>
-    filterSideBarList(sideBarList, getInput()));
-
+  const filter = input => filterSideBarList(sideBarList, input);
+  const sidebarFilter = apply(getInput, filter);
   // Whenever a keypress/keydown happens we generate a new sidebar.
-  sideBarInput.oninput = () => generateSideBar();
+  document.getElementById("sidebar-input").oninput = () => sidebarFilter();
 };
