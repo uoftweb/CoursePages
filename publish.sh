@@ -5,8 +5,7 @@ git checkout gh-pages
 # get the latest version of the docs
 git checkout origin/master -- docs
 
-mv "docs/*" "."
-rm -rf "docs"
+
 # add all files
 git add .
 
