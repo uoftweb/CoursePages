@@ -1,8 +1,11 @@
 :root {
+  /* Background colors */
   --main-bg-color: white;
-  --sidebar-bg-color: #69DC9E;
-  --text-color: #333;
+  --sidebar-bg-color: rgb(236, 240, 241);
+  /* Text Colors */
+  --main-text-color: #333;
   --sidebar-text-color: #333;
+  --link-color: #357edd; /* #bb133e */
 }
 
 /* 
@@ -24,7 +27,7 @@ p {
 /* docs/links.md#links */
 a {
   text-decoration: none;
-  color: #357edd;
+  color: var(--link-color);
 }
 
 /* docs/text.md */
@@ -34,9 +37,21 @@ a {
   /* margin-left: 1rem; */
   line-height: 1.5;
 }
+.text--large { 
+  font-size: 1.5rem;
+  max-width: 44rem;
+  line-height: 1.5;
+}
+.text--xlarge {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.text--center {
+  text-align: center;
+}
 /* docs/text.md#links */
 .link {
-  color: #357edd;
+  color: var(--link-color);
   text-decoration: none; 
   -webkit-transition: color .15s ease-in;
   transition: color .15s ease-in;
@@ -59,6 +74,39 @@ a {
   outline: 1px dotted currentColor;
 }
 
+/* docs/components.md#button */
+.button { 
+  display: inline-block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border: 1px solid var(--link-color);
+  transition: all .2s ease-in-out;
+  transform: translateZ(0);
+  font-weight: bold;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.position {}
+.position--right { float: right; }
+
+/* clearfix */
+.blocks:before,.blocks:after {
+  content: " ";
+  display: table;
+}
+.blocks:after { clear: both; }
+.blocks { *zoom: 1; }
+
+.block-50 {
+  float: left;
+  width: 100%; /* 50% on large screens */
+}
+
 .main {
   width: 100%;
   padding-left: 0.5rem;
@@ -70,6 +118,9 @@ a {
 .main__title {
   font-size: 2.25rem;
   font-weight: 700;
+}
+h1.main__title {
+  letter-spacing: 0.1em;
 }
 
 .sidebar {
@@ -275,7 +326,7 @@ a {
   max-width: 30rem;
   margin-right: auto;
   margin-left: auto;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
 .profile__img {
   border-radius: 100%;
@@ -290,6 +341,7 @@ a {
 /* Large Screens (desktops, laptops) */
 @media screen and (min-width: 53rem) {
 
+  .block-50 { width: 50%; }
   /* 
    * MAIN
    */
@@ -378,6 +430,12 @@ a {
   .profile {
     padding: 2rem; 
   }
+
+  .sidebar button:focus {
+    outline: none;
+    padding-left: 0.25rem;
+  }
+
   #sidebarToggle {
     display: block;
     left: 0;
@@ -387,10 +445,7 @@ a {
     background-color: transparent;
     border: none;
   }
-  .sidebar button:focus {
-    outline: none;
-    padding-left: 0.25rem;
-  }
+
   .hide {
     padding: 0;
     width: 1rem;
