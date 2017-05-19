@@ -91,7 +91,19 @@ window.onload = () => {
 
 function toggleSideBar() {
   const button = $("#sidebarToggle");
+  const root = $("#root");
+  const htmlStyles = window.getComputedStyle(document.querySelector("html"));
+  const sidebarBg = htmlStyles.getPropertyValue("--sidebar-bg-color");
+  const mainBg = htmlStyles.getPropertyValue("--main-bg-color");
+  console.log(mainBg);
+
+  const setTextAndBg = (text, bg) => {
+    button.text(text);
+    root.css('background-color', bg);
+  }
+
   $(".sidebar").toggleClass("hide");
-  if (button.text() === "◀") button.text("▶");
-  else button.text("◀");
+  if (button.text() === "◀") setTextAndBg("▶", mainBg);
+  else setTextAndBg("◀", sidebarBg);
 }
+
