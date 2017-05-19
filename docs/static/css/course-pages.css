@@ -47,9 +47,8 @@ a {
   font-size: 3rem;
   font-weight: 600;
 }
-.text--center {
-  text-align: center;
-}
+.text--center { text-align: center; }
+
 /* docs/text.md#links */
 .link {
   color: var(--link-color);
@@ -88,9 +87,7 @@ a {
   font-weight: bold;
 }
 
-.button:hover {
-  transform: scale(1.05);
-}
+.button:hover { transform: scale(1.05); }
 
 .position {}
 .position--right { float: right; }
@@ -113,6 +110,8 @@ a {
   background-color: var(--sidebar-bg-color);
 }
 
+#sidebarToggle  { display: none; }
+
 .main {
   padding-bottom: 4rem;
   padding-top: 1rem;
@@ -124,11 +123,8 @@ a {
 .main__title {
   font-size: 2.25rem;
   font-weight: 700;
-  /* margin: 0; */
 }
-h1.main__title {
-  letter-spacing: 0.1em;
-}
+h1.main__title { letter-spacing: 0.1em; }
 
 .sidebar {
   text-align: center;
@@ -138,30 +134,23 @@ h1.main__title {
   background: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
 }
-
 .sidebar__header--courseCode {
   font-weight: 500;
   margin-bottom: 0;
 }
-
 .sidebar__header--courseName {
   font-weight: 400;
   font-size: 1rem;
   color: var(--sidebar-text-color);
   letter-spacing: 0.1em;
 }
-/* f3 fw5 gray-80 */
-
 .sidebar__header--courseTerm {
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--sidebar-text-color);
 }
-
 /* on a small screen, we _dont_ want to filter */
 .sidebar__filter { display: none; }
-#sidebarToggle  { display: none; }
-
 .sidebar__list {
   list-style-type: none;
   margin:0;
@@ -196,8 +185,8 @@ h1.main__title {
 .sidebar__list--sublist__label { display: none; }
 
 .weeks { }
-.weeks__filter {}
-.weeks__filter--label {}
+.weeks__filter { }
+.weeks__filter--label { }
 .weeks__filter--input {
   font-size: 1rem;
   padding: 0.5rem;
@@ -205,55 +194,54 @@ h1.main__title {
 }
 .week {
   display: inline-block;
-  color: var(sidebar-text-color);
+  width: 90%;
+  
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  
+  border: 1px solid black;
+  
+
   font-size: 1.25rem;
   text-decoration: none;
   text-align: center;
-  margin-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: 1px solid black;
-  width: 90%;
-  margin-bottom: 0.5rem;
+  
+  color: var(sidebar-text-color);
+
   opacity: 1;
   -webkit-transition: opacity .15s ease-in;
   transition: opacity .15s ease-in; 
   cursor: pointer;
 }
 .week:hover {
-  /* border-color: #357edd; */
-  opacity: .8;
-  /* -webkit-transition: opacity .15s ease-in; */
-  /* transition: opacity .15s ease-in; */ 
-  background: var(--sidebar-bg-color);
+  background-color: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
+  
+  opacity: .8;
 }
 .week:focus {
-  border-color: #cdd2d8;
-  opacity: .5;
-  /* -webkit-transition: opacity .15s ease-in; */
-  /* transition: opacity .15s ease-in; */ 
-  background: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
+  background-color: var(--sidebar-bg-color);
+  border-color: #cdd2d8;
+  
+  opacity: .5;
 }
 .week:active {
   border-color: #cdd2d8;
- opacity: .8;
- /* -webkit-transition: opacity .15s ease-out; */
- /* transition: opacity .15s ease-out; */
+  
+  opacity: .8;
 }
 
 .assignment {
-  padding: 0;
   margin: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  /* text-align: center; */
-  padding-left: 1rem;
 }
 
 .assignment:hover { opacity: 0.7; }
@@ -266,14 +254,16 @@ h1.main__title {
   margin-right: 2rem;
 }
 .assignment__object--name {
+  margin-left: 0;
+  
   font-size: 0.875rem;
   font-weight: bold;
-  margin-left: 0;
 }
 .assignment__object--value {
+  margin-left: 0;
+
   font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 0;
 }
 .assignment__object--value .warning { color: #ff4136; }
 .assignment__object--value .noWarning { color: #19a974; }
@@ -365,9 +355,7 @@ h1.main__title {
     letter-spacing: normal;
     font-size: 1.5rem;
   }
-  .sidebar__header--courseTerm { 
-    font-size: 1.25rem;
-  }
+  .sidebar__header--courseTerm { font-size: 1.25rem; }
   .sidebar__filter { display: block; }
   .sidebar__list,
   .sidebar__list--sublist {
@@ -395,16 +383,12 @@ h1.main__title {
     padding: 0.875rem;
     padding-right: 0;
     display: block;
-    /* width: 100%; */
-    /* height: 100%; */
   }
   .sidebar__list--link:hover {
     background: var(--main-bg-color);
     cursor: pointer;
   }
-  .sidebar__list--sublist {
-    list-style-type: none;
-  }
+  .sidebar__list--sublist { list-style-type: none; }
   .sidebar__list--sublist__wrapper {
     padding: 0;
     margin: 0;
@@ -415,17 +399,11 @@ h1.main__title {
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
   }
-  .sidebar__list--sublist__label:hover {
-    background: var(--main-bg-color);
-  }
+  .sidebar__list--sublist__label:hover { background: var(--main-bg-color); }
   
-  .week { 
-    width: 16rem; 
-  }
+  .week { width: 16rem; }
 
-  .profile {
-    padding: 2rem; 
-  }
+  .profile { padding: 2rem; }
 
   .sidebar button:focus {
     outline: none;
@@ -450,10 +428,6 @@ h1.main__title {
     width: 1rem;
     background-color: var(--sidebar-bg-color);
   }
-  .hide * {
-    display: none;
-  }
-  .hide button {
-    display: block; 
-  }
+  .hide * { display: none; }
+  .hide button { display: block; }
 }
