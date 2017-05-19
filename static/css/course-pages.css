@@ -1,37 +1,10 @@
-/* >>>> OLD CSS */
-.bg-golden-brown { background: 	 rgba(194, 193, 49, 0.7)}
-
-.tj {
-  text-align: justify;
-}
-div { box-sizing: border-box; }
-
-.img-with-text img {
-  display: block;
-  margin: 0 auto;
-}
-
-.flex {
-  display: -webkit-flex;
-  display: flex;
-}
-
-.flex-row {
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-.flex-item {
-  -webkit-flex: auto;
-  flex: auto;
-}
-
-/* >>>> END OLD CSS */
-:root {
+:root { 
   --main-bg-color: white;
-  --sidebar-bg-color: #312c32;
-  --text-color: #333;
-  --sidebar-text-color: #feffff;
+  --sidebar-bg-color: #FEDC3D;
+  /* Text Colors */
+  --main-text-color: #292929;
+  --sidebar-text-color: navy;
+  --link-color: #357edd; /* #bb133e */
 }
 
 /* 

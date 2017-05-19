@@ -92,6 +92,6 @@ window.onload = () => {
 function toggleSideBar() {
   const button = $("#sidebarToggle");
   $(".sidebar").toggleClass("hide");
-  if (button.text() === "<") button.text(">");
-  else button.text("<");
+  if (button.text() === "◀") button.text("▶");
+  else button.text("◀");
 }
