@@ -5,7 +5,8 @@
   /* Text Colors */
   --main-text-color: #292929;
   --sidebar-text-color: #52658F;
-  --link-color: #333A56 ; /* #357edd */
+  --main-link-color: #357edd;
+  --sidebar-link-color: #333A56;
 }
 
 html, body { height: 100%; }
@@ -28,7 +29,7 @@ p {
 /* docs/links.md#links */
 a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--main-link-color);
 }
 
 /* docs/text.md */
@@ -51,26 +52,18 @@ a {
 
 /* docs/text.md#links */
 .link {
-  color: var(--link-color);
+  color: var(--main-link-color);
   text-decoration: none; 
-  -webkit-transition: color .15s ease-in;
-  transition: color .15s ease-in;
 }
 .link:link, .link:visited {
-  -webkit-transition: color .15s ease-in;
-  transition: color .15s ease-in;
 }
 .link:hover {
-  -webkit-transition: color .15s ease-in;
-  transition: color .15s ease-in;
+  text-decoration: underline;
 }
 .link:active {
-  -webkit-transition: color .15s ease-in;
-  transition: color .15s ease-in;
+  outline: 1px dotted currentColor;
 }
 .link:focus {
-  -webkit-transition: color .15s ease-in;
-  transition: color .15s ease-in;
   outline: 1px dotted currentColor;
 }
 
@@ -81,7 +74,7 @@ a {
   padding-bottom: 1rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  border: 1px solid var(--link-color);
+  border: 1px solid var(--main-link-color);
   transition: all .2s ease-in-out;
   transform: translateZ(0);
   font-weight: bold;
@@ -117,6 +110,7 @@ a {
   padding-top: 1rem;
   padding-left: 1rem;
   width: 100%;
+  height: 100%;
   background: var(--main-bg-color);
 }
 
@@ -134,6 +128,7 @@ h1.main__title { letter-spacing: 0.1em; }
   background: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
 }
+.sidebar a { color: var(--sidebar-link-color); }
 .sidebar__header--courseCode {
   font-weight: 500;
   margin-bottom: 0;
@@ -343,6 +338,7 @@ h1.main__title { letter-spacing: 0.1em; }
     top: 0;
     left: 0;
     float: left;
+    overflow-x: scroll;
     /* removing small settings */
     border: none;
     padding-left: 2rem;
