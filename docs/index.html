@@ -1,119 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./static/css/normalize.css">
-  <link rel="stylesheet"
-        href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
-  <link rel="stylesheet" href="./static/css/course-pages.css">
-  <link rel="stylesheet" href="./static/css/docs.css">
-  <title>CoursePages</title>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-  crossorigin="anonymous"></script>
-</head>
-<body class="">
-  <div class="sidebar">
-    <button id="sidebarToggle" onclick="toggleSideBar()">◀</button>
-    <header class="sidebar__header">
-      <h1 class="sidebar__header--courseCode">CoursePages</h1>
-      <h2 class="sidebar__header--courseName">A framework for beautiful course
-        pages</h2>
-      <h3 class="sidebar__header--courseTerm">Documentation</h3>
-    </header>
-    <nav class="">
-      <div class="sidebar__filter">
-        <input class="sidebar__filter--input"
-               type="text"
-               name="sidebar-input"
-               id="sidebar-input"
-               placeholder="filter"
-               value="" />
-      </div>
-      <ul class="sidebar__list" id="sidebar-search">
-        <li class="sidebar__list--itemwrapper">
-          <a class="sidebar__list--sublist__label" href="#">Home</a>
-          <ul class="sidebar__list--sublist">
-            <li class="sidebar__list--item">
-              <a class="sidebar__list--link" href="#getting-started">Getting
-                Started</a>
-            </li>
-            <li class="sidebar__list--item">
-              <a class="sidebar__list--link" href="#getting-started">Examples</a>
-            </li>
-            <li class="sidebar__list--item">
-              <a class="sidebar__list--link" href="#contributing">Contributing</a>
-            </li>
-            <li class="sidebar__list--item">
-              <a class="sidebar__list--link" href="#issues">Issues/Bugs</a>
-            </li>
-          </ul>
-        </li>
-        <li class="sidebar__list--item">
-          <a class="sidebar__list--link" href="#">Text Components</a>
-        </li>
-        <li class="sidebar__list--item">
-          <a class="sidebar__list--link" href="#">Sidebar Components</a>
-        </li>
-        <li class="sidebar__list--item">
-          <a class="sidebar__list--link" href="#">List Components</a>
-        </li>
-        <li class="sidebar__list--item">
-          <a class="sidebar__list--link" href="#">Customizations</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="main ">
-    <a class="github-button" href="https://github.com/uoftweb/CoursePages" data-icon="octicon-star" aria-label="Star uoftweb/CoursePages on GitHub">Star</a>
-    <a href="https://twitter.com/intent/tweet?text=CoursePages: easily make websites
-    for your courses" class="twitter bg-white-50 link dib mb2 br2 ph2 pb1 lh-solid v-top" style="background-color: #55acee;">
-      <svg class="geomicon dib v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="#fff">
-        <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"></path>
-      </svg>
-      <span class="dib v-mid white fw6" style="font-size: 12px;">Tweet</span>
-  </a>
-    <a name="getting-started"></a>
-    <h2 class="main__title">Getting Started</h2>
-    <p class="text">
-    PROJECT NAME is a collection of components and sane defaults to use in
-    course pages. To use PROJECT NAME, download one of our template courses, or
-    you can begin on your own with the CSS and JavaScript files.
-    <div>
-    <a href="#" class="button">Download <code>v1.0.0</code></a>
+    <link rel="stylesheet" href="./static/css/normalize.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="./static/css/course-pages.css">
+    <link rel="stylesheet" href="./static/css/docs.css">
+    <title>CoursePages</title>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  </head>
+  <body class="">
+    <div class="sidebar">
+      <button id="sidebarToggle" onclick="toggleSideBar()">◀</button>
+      <header class="sidebar__header">
+        <h1 class="sidebar__header--courseCode">CoursePages</h1>
+        <h2 class="sidebar__header--courseName">A framework for beautiful course
+          pages</h2>
+        <h3 class="sidebar__header--courseTerm">Documentation</h3>
+      </header>
+      <nav class="">
+        <div class="sidebar__filter">
+          <input class="sidebar__filter--input"
+                 type="text"
+                 name="sidebar-input"
+                 id="sidebar-input"
+                 placeholder="filter"
+                 value="" />
+        </div>
+        <ul class="sidebar__list" id="sidebar-search">
+          <li class="sidebar__list--itemwrapper">
+            <a class="sidebar__list--sublist__label" href="#">Home</a>
+            <ul class="sidebar__list--sublist">
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#getting-started">Getting
+                  Started</a>
+              </li>
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#getting-started">Examples</a>
+              </li>
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#contributing">Contributing</a>
+              </li>
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#issues">Issues/Bugs</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar__list--itemw">
+            <a class="sidebar__list--link" href="#">Text Components</a>
+          </li>
+          <li class="sidebar__list--itemw">
+            <a class="sidebar__list--link" href="sidebar.html">Sidebar Components</a>
+          </li>
+          <li class="sidebar__list--item">
+            <a class="sidebar__list--link" href="#">List Components</a>
+          </li>
+          <li class="sidebar__list--item">
+            <a class="sidebar__list--link" href="#">Customizations</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    </p>
-    <section>
-      <a name="examples"></a>
-      <h2 class="main__title">Examples</h2>
-      <p class="text">The following are four examples of courses that use
-      slightly different styles. Each link will take you to a new page that
-      demos the layout style and contains a downloadable template.</p>
-      <div class="weeks"> 
-        <a class="button" href="#" id="csc108">CSC108: multi-page</a>
-        <a class="button" href="#" id="csc121">CSC121: single-page</a>
-        <a class="button" href="#" id="csc320">CSC320: single-page with KaTeX</a>
-        <a class="button" href="#" id="csc411">CSC411: single-page with banner</a>
-      </div>  
-    </section>
-    <section>
-      <a name="contributing"></a>
-    <h2 class="main__title">Contributing</h2>
-    <p class="text">PROJECT NAME is an open source project hosted on <a href="https://github.com/uoftweb/CoursePages" class="link">GitHub.</a> You're encouraged
-    to help contribute towards making this a better tool.</p>
-    <h2 class="main__title">Issues &amp; Bugs</h2>
-    <p class="text">If you come across any bugs, please let us know on our
-    <a href="https://github.com/uoftweb/CoursePages/issues">Github's issue page</a></p>
-  </div>
-    </section>
-
-  <script src="./static/js/filter.js"></script>
-  <script src="./static/js/week-filter.js"></script>
-  <!-- <script src="/static/js/current-week.js"></script> -->
-</body>
+    <div class="main ">
+      <a class="github-button" href="https://github.com/uoftweb/CoursePages" data-icon="octicon-star" aria-label="Star uoftweb/CoursePages on GitHub">Star</a>
+      <a href="https://twitter.com/intent/tweet?text=CoursePages: easily make websites
+      for your courses" class="twitter bg-white-50 link dib mb2 br2 ph2 pb1 lh-solid v-top" style="background-color: #55acee;">
+        <svg class="geomicon dib v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="#fff">
+          <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"></path>
+        </svg>
+        <span class="dib v-mid white fw6" style="font-size: 12px;">Tweet</span>
+      </a>
+      <a name="getting-started"></a>
+      <h2 class="main__title">Getting Started</h2>
+      <p class="text">
+      PROJECT NAME is a collection of components and sane defaults to use in
+      course pages. To use PROJECT NAME, download one of our template courses, or
+      you can begin on your own with the CSS and JavaScript files.
+      <div>
+        <a href="#" class="button">Download <code>v1.0.0</code></a>
+      </div>
+      </p>
+      <section>
+        <a name="examples"></a>
+        <h2 class="main__title">Examples</h2>
+        <p class="text">The following are four examples of courses that use
+        slightly different styles. Each link will take you to a new page that
+        demos the layout style and contains a downloadable template.</p>
+        <div class="weeks"> 
+          <a class="button" href="samples/csc108/index.html" id="csc108">CSC108: multi-page</a>
+          <a class="button" href="samples/csc121/index.html" id="csc121">CSC121: single-page</a>
+          <a class="button" href="samples/csc320/index.html" id="csc320">CSC320: single-page with KaTeX</a>
+          <a class="button" href="samples/csc411/index.html" id="csc411">CSC411: single-page with banner</a>
+        </div>  
+      </section>
+      <section>
+        <a name="contributing"></a>
+        <h2 class="main__title">Contributing</h2>
+        <p class="text">PROJECT NAME is an open source project hosted on <a href="https://github.com/uoftweb/CoursePages" class="link">GitHub.</a> You're encouraged
+        to help contribute towards making this a better tool.</p>
+        <h2 class="main__title">Issues &amp; Bugs</h2>
+        <p class="text">If you come across any bugs, please let us know on our
+        <a href="https://github.com/uoftweb/CoursePages/issues">Github's issue page</a></p>
+      </section>
+    </div>
+    <script src="./static/js/filter.js"></script>
+    <script src="./static/js/week-filter.js"></script>
+    <!-- <script src="/static/js/current-week.js"></script> -->
+  </body>
 </html>

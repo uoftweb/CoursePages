@@ -98,6 +98,26 @@ a {
   width: 100%; /* 50% on large screens */
 }
 
+pre {
+  max-width: 50rem;
+  font-family: monospace;
+  font-size: 16px;
+  /* border: 1px solid var(--main-text-color); */
+  color: var(--main-text-color);
+  background: var(--main-bg-color);
+}
+pre:before,
+.code:before {
+  display: block;
+  margin-bottom: 0.25rem;
+  /* width: calc(100%); */
+  /* padding: 3px; */
+  text-transform: uppercase;
+  content: attr(data-lang);
+  color: var(--sidebar-text-color);
+  background: var(--sidebar-bg-color);
+}
+
 #root {
   display: inline-block;
   background-color: var(--sidebar-bg-color);
@@ -333,12 +353,12 @@ h1.main__title { letter-spacing: 0.1em; }
    * SIDEBAR
    */
   .sidebar {
+    position: fixed;
+    float: left;
     height: 100%;
     width: 25%;
     top: 0;
     left: 0;
-    float: left;
-    overflow-x: scroll;
     /* removing small settings */
     border: none;
     padding-left: 2rem;
@@ -353,6 +373,7 @@ h1.main__title { letter-spacing: 0.1em; }
   }
   .sidebar__header--courseTerm { font-size: 1.25rem; }
   .sidebar__filter { display: block; }
+  .sidebar__list { height: 50vh; overflow-y: scroll; }
   .sidebar__list,
   .sidebar__list--sublist {
     list-style: initial;

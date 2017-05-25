@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./static/css/normalize.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="./static/css/course-pages.css">
+    <link rel="stylesheet" href="./static/css/docs.css">
+    <title>CoursePages</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <button id="sidebarToggle" onclick="toggleSideBar()">◀</button>
+      <header class="sidebar__header">
+        <h1 class="sidebar__header--courseCode">CoursePages</h1>
+        <h2 class="sidebar__header--courseName">A framework for beautiful course
+          pages</h2>
+        <h3 class="sidebar__header--courseTerm">Documentation</h3>
+      </header>
+      <nav class="">
+        <div class="sidebar__filter">
+          <input class="sidebar__filter--input"
+                 type="text"
+                 name="sidebar-input"
+                 id="sidebar-input"
+                 placeholder="filter"
+                 value="" />
+        </div>
+        <ul class="sidebar__list" id="sidebar-search">
+          <li class="sidebar__list--item"></li>
+          <a class="sidebar__list--link" href="index.html">Home</a>
+          <li class="sidebar__list--item">
+            <a class="sidebar__list--link" href="#">Text Components</a>
+          </li>
+          <li class="sidebar__list--itemwrapper">
+            <a class="sidebar__list--sublist__label" href="#">Sidebar Components</a>
+            <ul class="sidebar__list--sublist">
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#description">Description</a>
+              </li>
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#html">Header</a>
+              </li>
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#html">Navigation</a>
+              </li>
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#html">Search</a>
+              </li>
+              <li class="sidebar__list--item">
+                <a class="sidebar__list--link" href="#html">Everything</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main">
+      <section>
+        <h2 class="main__title">Description</h2>
+        <p class="text">
+        The sidebar allows you to highlight certain sections of your course, as
+        well as general information, like the course code, the instructor, and
+        semester the course is offered.
+        </p>
+        <p class="text">The sidebar contains three main components. The
+        <code>header</code>, the <code>nav</code>, and a search of the
+        <code>nav</code>. The sidebar to your left is an example of that. To
+        just get the area for the sidebar and the content, all you need is the
+        following HTML</p>
+        <pre data-lang="html">
+&lt;div class="sidebar"&gt;
+  &lt;!-- place your sidebar content here --&gt;
+&lt;/div&gt;
+&lt;div class="main"&gt;
+  &lt;!-- place your main content here --&gt;
+&lt;/div&gt;
+        </pre>
+
+        <h3 class="main__subtitle">Customizations</h3>
+        <p class="text">
+        The following are the defaults for the custom attributes you can set on
+        the sidebar We provide a set of recommended customizations in 
+        <a class="link" href="#">customizations</a>. You can change these settings
+        in the <code>:root</code> attribute in the <code>course-pages.css</code>
+        file.
+        </p>
+        <pre data-lang="css">
+--sidebar-bg-color: #F7F5E6;
+--sidebar-text-color: #52658F;
+--sidebar-link-color: #333A56;
+        </pre>
+      </section>
+      <h2 class="main__title">HTML</h2>
+      <pre data-lang="html">
+&lt;div class="sidebar"&gt;
+&lt;/div&gt;
+      </pre>
+      <h3 class="main__subtitle">CSS</h3>
+      <pre data-lang="css">
+      </pre>
+    </div>
+    <script src="./static/js/filter.js"></script>
+    <script src="./static/js/week-filter.js"></script>
+  </body>
+</html>
