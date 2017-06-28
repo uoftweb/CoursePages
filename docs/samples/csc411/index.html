@@ -4,144 +4,15 @@
   <meta charset="utf-8">
   <title>CSC411 Fall 2016</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../static/css/normalize.css">
-  <link rel="stylesheet" href="../../static/css/tachyons.css">
-  <link rel="stylesheet" href="../../static/css/course-pages.css">
+  <link rel="stylesheet" href="../../../assets/css/normalize.css">
+  <link rel="stylesheet" href="../../../assets/css/course-pages.css">
 </head>
 <body>
-  <div>
-    <header class="dn-ns bb bw1 bg-golden-brown black-80 tc pv4">
-      <h1 class="mt2 mb0 f1 fw5 black">CSC411</h1>
-      <h2 class="mt2 mb0 f6 fw4 tracked">Machine Learning and Data Mining</h2>
-      <nav class="bt bb tc mw7 center mt4 bg-white">
-        <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/">Home</a>
-        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" href="/about">Teaching Team</a>
-        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" href="/portfolio">Coure Materials</a>
-        <a class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" href="/shop">Evaluation</a>
-      </nav>
-    </header>
-  <nav class="fixed w-25 dn db-ns top-0-ns left-0-ns vh-100 overflow-y-scroll fl bg-golden-brown">
-    <header class="ph3">
-      <h1 class="f1 fw5 black">CSC411</h1>
-      <h2 class="f2 fw5 gray-80">Machine Learning and Data Mining</h2>
-      <h3 class="f3 fw5 gray-80">Winter 2017</h3>
-    </header>
-    <div class="tc">
-      <input class="tc f5 pv1 ph2"
-             type="text"
-             name="sidebar-input"
-             id="sidebar-input"
-             placeholder="filter"
-             value="" />
+    <div class="separator separator--dashed">
+        <a class="btn btn-plain" href="../../index.html">&lt; Documentation</a>
+        <a class="btn btn-main">Download CSC411 Template</a>
     </div>
-
-    <ul class="list f5" id="sidebar-search">
-      <li class="pv2">
-				<a class="gray-80 link">Home</a>
-				<ul>
-					<li class="pv2"><a class="gray-80 link">About CSC411</a></li>
-					<li class="pv2"><a class="gray-80 link">Evaluation</a></li>
-					<li class="pv2"><a class="gray-80 link">Getting Help</a></li>
-				</ul>
-			</li>
-      <li class="pv2"><a class="gray-80 link" href="./team.html">Teaching Team</a></li>
-      <li class="pv2">
-        <a class="gray-80 link">Course Material</a>
-        <ul>
-          <li class="pv2"><a class="gray-80 link">Study Guide</a></li>
-					<li class="pv2"><a class="gray-80 link">Lectures</a></li>
-					<li class="pv2"><a class="gray-80 link">Resources</a></li> 
-          <li class="pv2"><a class="gray-80 link">Software</a></li>  
-          <li class="pv2"><a class="gray-80 link">LaTeX</a></li>        
-				</ul>
-      </li>
-      <li class="pv2">
-        <a class="gray-80 link">Evaluations</a>
-        <ul>
-					<li class="pv2"><a class="gray-80 link">Projects</a></li>
-					<li class="pv2"><a class="gray-80 link">Midterm</a></li>
-          <li class="pv2"><a class="gray-80 link">Markus</a></li>
-				</ul>
-      </li>
-		</ul>
-  </nav>
-
-  <img class="w-75-ns dn db-ns fr ov-y-scroll bg-white"
-    src="http://www.cs.toronto.edu/~guerzhoy/411/kandinsky411.png"
-    height="150" alt="kandinsky">
-
-  <section class="w-75-ns fr ph3 vh-100 ov-y-scroll bg-white">
-    <article class="cf">
-      <h1 class="f2 black-80">About CSC411</h1>
-      <div class="fl">
-         <p class="ml4 lh-copy measure-wide">
-          This course serves as a broad introduction to machine learning and data
-          mining. We will cover the fundamentals of supervised and unsupervised
-          learning. We will focus on neural networks, policy gradient methods in
-          reinforcement learning. We use the Python NumPy/SciPy stack. Students
-          should be comfortable with calculus, probability, and linear algebra.
-          </p></br>
-      </div>
-      <div class="fl w-40-ns">
-        <div class="taj w-70">
-          <img src="http://www.cs.toronto.edu/~guerzhoy/411/neuralcat.png" alt="neuralcat" />
-          <small>"Nikulin & Novak, " 
-            <a href="https://arxiv.org/abs/1602.07188">Exploring the Neural Algorithm of Artistic Style</a></small>
-        </div>
-      </div>
-    </article>
-   
-    <h2 class="f3 black-80">Required math background</h2>
-    <p class="ml4 lh-copy measure-wide">
-      Here's (roughly) the mawth that you need for this course. Linear Algebra:
-       vectors: the dot product, vector norm, vector addition; matrices: matrix
-       multiplication. Calculus: derivatives, derivatives as the slope of the
-       function; integrals. Probability: random variables, expectation,
-       independence. Other topics will be needed, but are not part of the
-       pre-requisites, so I will devote an appropriate amount of lecture time to
-        them.
-    </p></br>
-    <h3 class="f3 black-80">Evaluation</h3>
-    <p>The better of: </P>
-    <article class="cf">
-      <div class="fl w-15">
-        <ul class="list">
-          <li class="mb2">
-            <p class="lh-copy measure-wide">40%: Projects</p>
-          </li>
-          <li class="mb2">
-            <p class="lh-copy measure-wide">30%: Midterm</p>
-          </li>
-          <li class="mb2">
-            <p class="lh-copy measure-wide">30%: Final Exam</p>
-          </li>
-        <ul>
-      </div>
-      <div class="fl w-15">
-        <ul class="list">
-          <li>&nbsp</li> 
-          <li class="mb2">
-            <p class="lh-copy measure-wide">Or</p>
-          </li>
-        <ul>
-      </div>
-      <div class="fl w-15">
-        <ul class="list">
-          <li class="mb2">
-            <p class="lh-copy measure-wide">40%: Projects</p>
-          </li>
-          <li class="mb2">
-            <p class="lh-copy measure-wide">30%: Midterm</p>
-          </li>
-          <li class="mb2">
-            <p class="lh-copy measure-wide">30%: Final Exam</p>
-          </li>
-        </ul>
-      </div>
-    </article>
-    <p>You must receive at least 40% on the final exam to pass the course.</p></br>
-  </section>
-</div>
-<script src="../../static/js/filter.js"></script>
+    <div class="sidebar"></div>
+    <div class="main"></div>
 </body>
 </html>
