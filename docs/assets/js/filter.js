@@ -88,22 +88,3 @@ window.onload = () => {
   // Whenever a keypress/keydown happens we generate a new sidebar.
   document.getElementById("sidebar-input").oninput = () => sidebarFilter();
 };
-
-function toggleSideBar() {
-  const button = $("#sidebarToggle");
-  const root = $("#root");
-  const htmlStyles = window.getComputedStyle(document.querySelector("html"));
-  const sidebarBg = htmlStyles.getPropertyValue("--sidebar-bg-color");
-  const mainBg = htmlStyles.getPropertyValue("--main-bg-color");
-  console.log(mainBg);
-
-  const setTextAndBg = (text, bg) => {
-    button.text(text);
-    root.css('background-color', bg);
-  }
-
-  $(".sidebar").toggleClass("hide");
-  if (button.text() === "◀") setTextAndBg("▶", mainBg);
-  else setTextAndBg("◀", sidebarBg);
-}
-

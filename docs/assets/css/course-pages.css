@@ -8,27 +8,31 @@
   --sidebar-text-color: #52658F;
   --main-link-color: #357edd;
   --sidebar-link-color: #333A56;
+
+  /* Default Colors (Please don't change) */
+  --red: #FF725C;
+  --black: black;
+  --blue: #357EDD;
+  --light-gray: #CDD2D8;
+  --light-grey: #CDD2D8;
+  --green: #19A974;
+  --white: #fff
 }
-
-
 
 html, body { height: 100%; }
 
-
-
 /** docs/text.md **/
-h1 { font-size: 3rem; }
-
-h2 { font-size: 2.25rem; }
-
-h3 { font-size: 1.5rem; }
-
-h4 { font-size: 1.25rem; }
+h1, .h1 { font-size: 3rem; }
+h2, .h2 { font-size: 2.25rem; }
+h3, .h3 { font-size: 1.5rem; }
+h4, .h4 { font-size: 1.25rem; }
 
 /* we do not recommend using <h5> or <h6> tags. If you feel like your content
  * requires them, consider a rewrite or a restructuring of the document.
  */
 
+
+/* docs/text.md */
 p {
   /* we limit the max-width of text for readability reasons. White space _is_
    * important :)
@@ -36,14 +40,13 @@ p {
   max-width: 50rem;
   line-height: 1.5;
 }
-
 .text {
   max-width: 40rem;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-.text--large { 
+.text--large {
   max-width: 44rem;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -56,70 +59,79 @@ p {
 
 .text--center { text-align: center; }
 
-
-
 /** docs/links.md#links **/
 a {
   text-decoration: none;
-  color: var(--main-link-color);
+  color: var(--blue);
 }
-
 .link {
   color: var(--main-link-color);
-  text-decoration: none; 
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
 }
-
 .link:link, .link:visited {
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
 }
-
 .link:hover {
-  text-decoration: underline;
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
 }
-
 .link:active {
-  outline: 1px dotted currentColor;
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
 }
-
 .link:focus {
+  -webkit-transition: color .15s ease-in;
+  transition: color .15s ease-in;
   outline: 1px dotted currentColor;
 }
-
 
 
 /** docs/components.md#button **/
-.button { 
+.btn {
+  margin: 0.1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 1px solid var(--black);
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
+  cursor: pointer;
+}
+.btn-warning {
+  background-color: var(--red);
+  color: var(--black);
+}
+.btn-success {
+  background-color: var(--green);
+  color: white;
+}
+.btn-plain {
+  background-color: var(--white);
+  color: var(--black);
+}
+.btn-main {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+
+/* docs/components.md#separator */
+.separator {
   display: inline-block;
-  padding-top: 1rem;
+  width: 100%;
   padding-bottom: 1rem;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  border: 1px solid var(--main-link-color);
-  transition: all .2s ease-in-out;
-  transform: translateZ(0);
-  font-weight: bold;
+  padding-top: 1rem;
+  border-bottom: 0.2rem solid black;
 }
-
-.button:hover { transform: scale(1.05); }
-
-
-
-/** docs/misc.md#position **/
-.position {}
-
-.position--right { float: right; }
-
-
-
-/** docs/misc.md#clearfix **/
-.clearfix:before,.clearfix:after {
-  content: " ";
-  display: table;
+.separator--dashed {
+  border-bottom-style: dashed;
 }
-
-.clearfix:after { clear: both; }
-
-.clearfix { *zoom: 1; }
-
 
 
 /** docs/misc.md#blocks **/
@@ -127,7 +139,6 @@ a {
   width: 100%; /* 50% on large screens, see @media below */
   float: left;
 }
-
 
 
 /** docs/components.md#code-block **/
@@ -150,17 +161,37 @@ pre:before,
 }
 
 
+/** docs/utility.md **/
+.position {}
+.position--right { float: right; }
+.position--left { float: left; }
+
+.clearfix:before,.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after { clear: both; }
+
+.clearfix { *zoom: 1; }
 /** docs/misc.md#unique **/
 #root {
   display: inline-block;
   background-color: var(--sidebar-bg-color);
 }
 
+.fixed { position: fixed; }
+.sticky { display: block; position: sticky; }
+.static { position: static; }
+.above { z-index: 100; }
+
 #sidebarToggle  { display: none; }
 
+#root {
+  display: inline-block;
+  background-color: var(--sidebar-bg-color);
+}
 
-
-/** docs/components.md#main **/
 .main {
   width: 100%;
   height: 100%;
@@ -169,7 +200,6 @@ pre:before,
   padding-left: 1rem;
   background: var(--main-bg-color);
 }
-
 .main__title {
   font-size: 2.25rem;
   font-weight: 700;
@@ -178,19 +208,17 @@ pre:before,
 h1.main__title { letter-spacing: 0.1em; }
 
 
-
 /** docs/components.md#sidebar **/
 .sidebar {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--black);
   text-align: center;
   background: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
 }
 
 .sidebar a { color: var(--sidebar-link-color); }
-
 .sidebar__header--courseCode {
   margin-bottom: 0;
   font-weight: 500;
@@ -222,39 +250,40 @@ h1.main__title { letter-spacing: 0.1em; }
 .sidebar__list--itemwrapper {
   display: inline-block;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 .sidebar__list--item:hover {
   background: var(--main-bg-color);
 }
-
 .sidebar__list--item {
-  margin: 0;
-  padding: 1rem;
+    display: inline-block;
+}
+
+.sidebar__list--link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.875rem;
 }
 
 .sidebar__list--sublist {
-  padding: 0;
   list-style-type: none;
+  padding: 0;
 }
 
 .sidebar__list--sublist__wrapper {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar__list--sublist__label { display: none; }
 
 
-
 /** docs/components.md#schedule **/
 .weeks { }
-
 .weeks__filter { }
-
 .weeks__filter--label { }
-
 .weeks__filter--input {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
@@ -264,45 +293,41 @@ h1.main__title { letter-spacing: 0.1em; }
 .week {
   display: inline-block;
   width: 90%;
-  
+
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  
-  border: 1px solid black;
-  
+
+  border: 1px solid var(--black);
+
   font-size: 1.25rem;
   text-decoration: none;
   text-align: center;
-  
-  color: var(sidebar-text-color);
+
+  color: var(--sidebar-text-color);
 
   opacity: 1;
   -webkit-transition: opacity .15s ease-in;
-  transition: opacity .15s ease-in; 
+  transition: opacity .15s ease-in;
 
   cursor: pointer;
 }
-
 .week:hover {
   background-color: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
-  
+
   opacity: .8;
 }
-
 .week:focus {
   color: var(--sidebar-text-color);
   background-color: var(--sidebar-bg-color);
   border-color: #cdd2d8;
-  
+
   opacity: .5;
 }
-
 .week:active {
-  border-color: #cdd2d8;
-  
+  border-color: var(--light-gray);
   opacity: .8;
 }
 
@@ -310,43 +335,44 @@ h1.main__title { letter-spacing: 0.1em; }
 
 /** docs/components.md#assignments **/
 .assignment {
+  padding: 0;
   margin: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding: 1rem;
-  
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
 }
 
 .assignment:hover { opacity: 0.7; }
-
 .assignment__title {
   font-size: 1.5rem;
   font-weight: 600;
 }
-
 .assignment__object {
   display: inline-block;
   margin-right: 2rem;
 }
-
 .assignment__object--name {
   margin-left: 0;
-  
+
   font-size: 0.875rem;
   font-weight: bold;
 }
-
 .assignment__object--value {
   margin-left: 0;
 
   font-size: 1.5rem;
   font-weight: bold;
 }
-.assignment__object--value .warning { color: #ff4136; }
-
-.assignment__object--value .noWarning { color: #19a974; }
+.assignment__object--value .warning {
+  color: var(--red);
+}
+.assignment__object--value .noWarning {
+  color: var(--green);
+}
 
 .assignment__link {
   display: -webkit-inline-box;
@@ -364,7 +390,6 @@ h1.main__title { letter-spacing: 0.1em; }
   text-decoration: none;
   color: var(--main-text-color);
 }
-
 .assignment__link:hover {
   background: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
@@ -372,7 +397,6 @@ h1.main__title { letter-spacing: 0.1em; }
 }
 
 .assignment__link--arrow { width: 1rem; }
-
 
 
 /** docs/components.md#staff **/
@@ -388,14 +412,11 @@ h1.main__title { letter-spacing: 0.1em; }
 
   background: var(--main-bg-color);
 }
-
 .profile__name { font-size: 1.25rem; }
-
 .profile__separator {
  max-width: 4rem;
  border: 0.125rem solid rgba(0, 0, 0, 0.1);
 }
-
 .profile__description {
   max-width: 30rem;
 
@@ -406,29 +427,28 @@ h1.main__title { letter-spacing: 0.1em; }
 
   color: var(--main-text-color);
 }
-
 .profile__img {
   display: inline-block;
   width: 8rem;
   height: 8rem;
   border-radius: 100%;
 }
-
 .profile__img--wrapper {
   text-align: center;
 }
+
 
 /* Large Screens (desktops, laptops) */
 @media screen and (min-width: 53rem) {
 
   .block-50 { width: 50%; }
 
-  /* 
+  /*
    * MAIN
    */
   .main {
-    float: right;
     width: 75%;
+    float: right;
   }
 
 
@@ -453,32 +473,34 @@ h1.main__title { letter-spacing: 0.1em; }
     text-align: left;
   }
   .sidebar__header--courseCode { font-size: 3rem; }
-  .sidebar__header--courseName { 
+  .sidebar__header--courseName {
     letter-spacing: normal;
     font-size: 1.5rem;
   }
   .sidebar__header--courseTerm { font-size: 1.25rem; }
   .sidebar__filter { display: block; }
-  .sidebar__list { height: 50vh; overflow-y: scroll; }
+  .sidebar__list { max-height: 50vh; overflow-y: scroll; }
   .sidebar__list,
   .sidebar__list--sublist {
     list-style: initial;
-    list-style-type:none; 
+    list-style-type:none;
     /* margin:0; */
     padding: 0.5rem;
   }
-  .sidebar__list--item,
+
   .sidebar__list--itemwrapper {
-    /* margin: 0; */
     display: list-item;
-    /* padding-left: 1rem; */
   }
   .sidebar__list--itemwrapper {
-    padding: 0.875rem;
-    padding-right: 0;
     padding-bottom: 0;
   }
+  .sidebar__list--link:hover {
+    background: var(--main-bg-color);
+    cursor: pointer;
+  }
   .sidebar__list--item {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -486,10 +508,6 @@ h1.main__title { letter-spacing: 0.1em; }
     padding: 0.875rem;
     padding-right: 0;
     display: block;
-  }
-  .sidebar__list--link:hover {
-    background: var(--main-bg-color);
-    cursor: pointer;
   }
   .sidebar__list--sublist { list-style-type: none; }
   .sidebar__list--sublist__wrapper {
@@ -503,7 +521,7 @@ h1.main__title { letter-spacing: 0.1em; }
     padding-bottom: 0.875rem;
   }
   .sidebar__list--sublist__label:hover { background: var(--main-bg-color); }
-  
+
   .week { width: 16rem; }
 
   .profile { padding: 2rem; }
