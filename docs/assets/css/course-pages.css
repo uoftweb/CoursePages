@@ -91,6 +91,7 @@ a {
 
 /** docs/components.md#button **/
 .btn {
+  display: inline-block;
   margin: 0.1rem;
   padding: 0.5rem;
   cursor: pointer;
