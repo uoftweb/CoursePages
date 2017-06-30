@@ -539,7 +539,7 @@ h1.main__title { letter-spacing: 0.1em; }
     padding: 0;
     position: fixed;
     height: 100%;
-    z-index: 100;
+    z-index: 1;
     background-color: var(--sidebar-bg-color);
     border: none;
   }

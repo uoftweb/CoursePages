@@ -4,7 +4,7 @@
  * ```
  * > const f = apply(f1, f2, f3, f4)
  * > const result = f(1)
- * > result === f4(f3(f2(f1(x)))) 
+ * > result === f4(f3(f2(f1(x))))
  * True
  * ```
  */
@@ -39,7 +39,9 @@ function sidebar(sidebarList) {
  * () => {text: string , html: LI}[]
  */
 const initSideBarList = () => {
-  return sidebar(document.getElementById("sidebar-search"));
+  const sidebarDiv = document.getElementById("sidebar-search");
+  if (sidebarDiv) return sidebar(document.getElementById("sidebar-search"));
+  return [];
 };
 
 /*
@@ -78,13 +80,16 @@ const filterSideBarList = (originalList, searchText) => {
 };
 
 window.onload = () => {
-  // get a list representing the sidebar
-  const sideBarList = initSideBarList();
-
   // gets text field data when called
-  const getInput = () => document.getElementById("sidebar-input").value;
-  const filter = input => filterSideBarList(sideBarList, input);
-  const sidebarFilter = apply(getInput, filter);
-  // Whenever a keypress/keydown happens we generate a new sidebar.
-  document.getElementById("sidebar-input").oninput = () => sidebarFilter();
+  const sidebarInput = document.getElementById("sidebar-input");
+  if (sidebarInput) {
+    // get a list representing the sidebar
+    const sideBarList = initSideBarList();
+
+    const getInput = () => sidebarInput.value;
+    const filter = input => filterSideBarList(sideBarList, input);
+    const sidebarFilter = apply(getInput, filter);
+    // Whenever a keypress/keydown happens we generate a new sidebar.
+    document.getElementById("sidebar-input").oninput = () => sidebarFilter();
+  }
 };

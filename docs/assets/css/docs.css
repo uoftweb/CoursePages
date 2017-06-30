@@ -2,6 +2,7 @@
     top: 0;
     background-color: white;
     position: fixed;
+    z-index: 2;
 }
 
 .sidebar {
