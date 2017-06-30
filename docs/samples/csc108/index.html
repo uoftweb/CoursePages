@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>CSC108 Fall 2016</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../assets/css/normalize.css">
-  <link rel="stylesheet" href="../../assets/css/course-pages.css">
-  <link rel="stylesheet" href="../../assets/css/docs.css">
-</head>
-<body>
-    <div class="separator separator--dashed">
-        <a class="btn btn-plain" href="../../index.html">&lt; Documentation</a>
-        <a class="btn btn-main">Download CSC108 Template</a>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSC108 Fall 2016</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/course-pages.css">
+    <link rel="stylesheet" href="../../assets/css/docs.css">
+  </head>
+  <body>
+    <div class="docs--nav cleafix static separator separator--dashed">
+      <a class="btn btn-plain" href="../../index.html">&lt; Documentation</a>
+      <a href="" class="btn btn-main">Download CSC108 Template</a>
     </div>
-    <div class="sidebar"></div>
-    <div class="main"></div>
-</body>
+    <div class="clearfix">
+      <button id="sidebarToggle">◀</button>
+      <div class="sidebar">
+        <header class="sidebar__header">
+          <h1 class="sidebar__header--courseCode">CSC108</h1>
+          <h2 class="sidebar__header--courseName">Intro to Computer Programming</h2>
+          <h3 class="sidebar__header--courseTerm">Winter 2017</h3>
+        </header>
+        <nav class=""></nav>
+
+      </div>
+      <div class="main"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/filter.js"></script>
+    <script src="../../assets/js/week-filter.js"></script>
+    <script src="../../assets/js/sidebar.js"></script>
+  </body>
 </html>

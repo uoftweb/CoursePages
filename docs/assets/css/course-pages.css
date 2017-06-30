@@ -1,22 +1,21 @@
 /** docs/defaults.md **/
 :root {
-  /* Background colors */
-  --main-bg-color: white;
-  --sidebar-bg-color: #F7F5E6;
-  /* Text Colors */
-  --main-text-color: #292929;
-  --sidebar-text-color: #52658F;
-  --main-link-color: #357edd;
-  --sidebar-link-color: #333A56;
-
   /* Default Colors (Please don't change) */
   --red: #FF725C;
   --black: black;
   --blue: #357EDD;
   --light-gray: #CDD2D8;
-  --light-grey: #CDD2D8;
   --green: #19A974;
-  --white: #fff
+  --white: #fff;
+
+  /* Background colors */
+  --main-bg-color: var(--white);
+  --sidebar-bg-color: #F7F7FF;
+  /* Text Colors */
+  --main-text-color: var(--black);
+  --sidebar-text-color: #070600;
+  --main-link-color: var(--blue);
+  --sidebar-link-color: #279AF1;
 }
 
 html, body { height: 100%; }
@@ -199,6 +198,7 @@ pre:before,
   padding-top: 1rem;
   padding-left: 1rem;
   background: var(--main-bg-color);
+  color: var(--main-text-color);
 }
 .main__title {
   font-size: 2.25rem;
@@ -540,8 +540,10 @@ h1.main__title { letter-spacing: 0.1em; }
     position: fixed;
     height: 100%;
     z-index: 1;
-    background-color: var(--sidebar-bg-color);
     border: none;
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-text-color);
+    opacity: 0.6;
   }
 
   .hide {
